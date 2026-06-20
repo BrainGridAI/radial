@@ -1,0 +1,525 @@
+openapi: 3.1.0
+info:
+  title: Radial REST API
+  version: "v1"
+  summary: The fast, keyboard-first issue tracker — REST surface.
+  description: |
+    PROVISIONAL spec, reverse-engineered from the `radial.build` CLI v1.0.6 (the
+    authoritative HTTP client) plus live response shapes observed against
+    api.radial.build on 2026-06-19. Use until the official, hand-authored spec
+    lands. Where the CLI did not exercise an endpoint (project create/update/delete),
+    fields are marked accordingly.
+
+    Auth: Bearer API key (`rk_...`, Settings -> Developers) or OAuth 2.1 access token.
+    Rate limit: ~1 request/second. Errors: non-2xx return `{ "error": { "code", "message" } }`.
+servers:
+  - url: https://api.radial.build/v1
+    description: Production (override host with RADIAL_API_URL)
+
+security:
+  - bearerAuth: []
+
+tags:
+  - name: meta
+  - name: issues
+  - name: comments
+  - name: projects
+  - name: search
+  - name: triage
+  - name: data
+
+paths:
+  /:
+    get:
+      tags: [meta]
+      operationId: getMeta
+      summary: Identify the caller + workspace (the CLI calls this after auth).
+      responses:
+        "200":
+          description: API + credential context.
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Meta" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+
+  /meta:
+    get:
+      tags: [meta]
+      operationId: getWorkspaceMeta
+      summary: Workspace metadata — teams and their workflow statuses (with categories).
+      description: |
+        Source of truth for resolving a status category (e.g. `started`) to a concrete
+        team status NAME (e.g. `In Progress`) when writing back via PATCH.
+      responses:
+        "200":
+          description: Workspace, teams, and statuses.
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/WorkspaceMeta" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+
+  /issues:
+    get:
+      tags: [issues]
+      operationId: listIssues
+      summary: List issues with optional filters.
+      parameters:
+        - { in: query, name: team, schema: { type: string }, description: Team key (e.g. RAD). }
+        - { in: query, name: assignee, schema: { type: string }, description: "Email, or 'me'." }
+        - { in: query, name: status, schema: { type: string } }
+        - { in: query, name: label, schema: { type: string } }
+        - { in: query, name: project, schema: { type: string } }
+        - { in: query, name: cycle, schema: { type: string } }
+        - { in: query, name: priority, schema: { $ref: "#/components/schemas/Priority" } }
+        - { in: query, name: limit, schema: { type: integer } }
+      responses:
+        "200":
+          description: Issues.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [issues]
+                properties:
+                  issues: { type: array, items: { $ref: "#/components/schemas/Issue" } }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+    post:
+      tags: [issues]
+      operationId: createIssue
+      summary: Create an issue (title required).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/IssueCreate" }
+      responses:
+        "200":
+          description: Created issue.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [issue]
+                properties: { issue: { $ref: "#/components/schemas/Issue" } }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+
+  /issues/{id}:
+    parameters:
+      - { in: path, name: id, required: true, schema: { type: string }, description: "Issue identifier, e.g. RAD-136." }
+    get:
+      tags: [issues]
+      operationId: getIssue
+      summary: Full issue detail.
+      responses:
+        "200":
+          description: Issue.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [issue]
+                properties: { issue: { $ref: "#/components/schemas/Issue" } }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+    patch:
+      tags: [issues]
+      operationId: updateIssue
+      summary: Update an issue (status transitions, assignee, labels, archive, ...).
+      description: |
+        Partial update. Send only the fields to change. This is the write-back path
+        for status transitions (e.g. `{ "status": "In Progress" }`).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/IssueUpdate" }
+      responses:
+        "200":
+          description: Updated issue.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [issue]
+                properties: { issue: { $ref: "#/components/schemas/Issue" } }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+
+  /issues/{id}/close:
+    parameters:
+      - { in: path, name: id, required: true, schema: { type: string } }
+    post:
+      tags: [issues]
+      operationId: closeIssue
+      summary: Close an issue, optionally with a message.
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message: { type: string }
+      responses:
+        "200":
+          description: Closed issue.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [issue]
+                properties: { issue: { $ref: "#/components/schemas/Issue" } }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+
+  /issues/{id}/comments:
+    parameters:
+      - { in: path, name: id, required: true, schema: { type: string } }
+    get:
+      tags: [comments]
+      operationId: listComments
+      summary: List comments on an issue.
+      responses:
+        "200":
+          description: Comments.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [comments]
+                properties:
+                  comments: { type: array, items: { $ref: "#/components/schemas/Comment" } }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+    post:
+      tags: [comments]
+      operationId: createComment
+      summary: Add a comment to an issue.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [body]
+              properties:
+                body: { type: string }
+                parentId: { type: string, description: Parent comment id for threaded replies. }
+      responses:
+        "200":
+          description: Created comment.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: { comment: { $ref: "#/components/schemas/Comment" } }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+
+  /search:
+    get:
+      tags: [search]
+      operationId: searchIssues
+      summary: Full-text/fuzzy issue search (the same index the app uses).
+      parameters:
+        - { in: query, name: q, required: true, schema: { type: string } }
+      responses:
+        "200":
+          description: Ranked results.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [results]
+                properties:
+                  results: { type: array, items: { $ref: "#/components/schemas/IssueSummary" } }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+
+  /triage:
+    get:
+      tags: [triage]
+      operationId: triageQueue
+      summary: Issues in a triage status.
+      parameters:
+        - { in: query, name: team, schema: { type: string } }
+      responses:
+        "200":
+          description: Triage issues.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [issues]
+                properties:
+                  issues: { type: array, items: { $ref: "#/components/schemas/Issue" } }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+
+  /projects:
+    get:
+      tags: [projects]
+      operationId: listProjects
+      summary: List active projects.
+      responses:
+        "200":
+          description: Projects.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [projects]
+                properties:
+                  projects: { type: array, items: { $ref: "#/components/schemas/Project" } }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+    post:
+      tags: [projects]
+      operationId: createProject
+      summary: Create a project. (Documented; not exercised by the CLI — fields provisional.)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name]
+              properties:
+                name: { type: string }
+                description: { type: string }
+                lead: { type: string }
+                startDate: { type: string }
+                targetDate: { type: string }
+      responses:
+        "200":
+          description: Created project.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: { project: { $ref: "#/components/schemas/Project" } }
+
+  /projects/{id}:
+    parameters:
+      - { in: path, name: id, required: true, schema: { type: string } }
+    patch:
+      tags: [projects]
+      operationId: updateProject
+      summary: Update a project. (Documented; not exercised by the CLI.)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        "200": { description: Updated project. }
+    delete:
+      tags: [projects]
+      operationId: deleteProject
+      summary: Delete a project. (Documented; not exercised by the CLI.)
+      responses:
+        "204": { description: Deleted. }
+
+  /export:
+    get:
+      tags: [data]
+      operationId: exportWorkspace
+      summary: Full workspace export.
+      parameters:
+        - { in: query, name: format, schema: { type: string, enum: [json, csv], default: json } }
+      responses:
+        "200":
+          description: Export payload (JSON object or CSV text).
+          content:
+            application/json: { schema: { type: object, additionalProperties: true } }
+            text/csv: { schema: { type: string } }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+
+  /import:
+    post:
+      tags: [data]
+      operationId: importWorkspace
+      summary: Deep import (issues, labels, projects, parents, relations, comments).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [payload]
+              properties:
+                payload:
+                  type: object
+                  description: Normalized import payload (see CLI importers — source/defaultTeam/issues[]).
+                dryRun: { type: boolean, default: false }
+      responses:
+        "200":
+          description: Import result.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: object
+                    properties:
+                      dryRun: { type: boolean }
+                      created: { type: integer }
+                      failed: { type: integer }
+                      relationsCreated: { type: integer }
+                      commentsCreated: { type: integer }
+                      labelsCreated: { type: array, items: { type: string } }
+                      warnings: { type: array, items: { type: string } }
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: "Radial API key (rk_full_ / rk_write_ / rk_read_) or OAuth 2.1 access token."
+
+  responses:
+    Unauthorized:
+      description: Missing or invalid credentials.
+      content:
+        application/json: { schema: { $ref: "#/components/schemas/Error" } }
+    NotFound:
+      description: Resource not found.
+      content:
+        application/json: { schema: { $ref: "#/components/schemas/Error" } }
+
+  schemas:
+    Priority:
+      type: string
+      enum: [none, urgent, high, medium, low]
+    StatusCategory:
+      type: string
+      enum: [triage, backlog, unstarted, started, completed, canceled]
+    User:
+      type: object
+      properties:
+        email: { type: [string, "null"] }
+        name: { type: [string, "null"] }
+        isAgent: { type: boolean }
+    Meta:
+      type: object
+      properties:
+        name: { type: string }
+        version: { type: string }
+        workspaceId: { type: string, format: uuid }
+        scope: { type: string, description: "e.g. read | write" }
+        isAgent: { type: boolean }
+        credential: { type: string, description: "e.g. api_key | oauth" }
+    WorkspaceMeta:
+      type: object
+      properties:
+        workspace:
+          type: object
+          properties:
+            slug: { type: string }
+        teams:
+          type: array
+          items:
+            type: object
+            properties:
+              key: { type: string }
+              name: { type: string }
+        statuses:
+          type: array
+          items:
+            type: object
+            properties:
+              team: { type: string }
+              name: { type: string }
+              category: { $ref: "#/components/schemas/StatusCategory" }
+    Issue:
+      type: object
+      properties:
+        id: { type: string, description: "Human identifier, e.g. RAD-136." }
+        url: { type: string }
+        title: { type: string }
+        description: { type: [string, "null"], description: Markdown. }
+        status: { type: string, description: Workflow state name (team-specific). }
+        statusCategory: { $ref: "#/components/schemas/StatusCategory" }
+        priority: { $ref: "#/components/schemas/Priority" }
+        assignee: { oneOf: [ { $ref: "#/components/schemas/User" }, { type: "null" } ] }
+        creator: { $ref: "#/components/schemas/User" }
+        team: { type: string }
+        project: { type: [string, "null"] }
+        cycle: { type: [string, "null"] }
+        labels: { type: array, items: { type: string } }
+        parent: { type: [string, "null"], description: Parent issue identifier (the only hierarchy/relation in the issue object). }
+        estimate: { type: [number, "null"] }
+        dueDate: { type: [string, "null"] }
+        createdAt: { type: string, format: date-time }
+        updatedAt: { type: string, format: date-time }
+        completedAt: { type: [string, "null"], format: date-time }
+        comments:
+          type: array
+          description: Present on GET /issues/{id} (the CLI merges /comments in).
+          items: { $ref: "#/components/schemas/Comment" }
+    IssueSummary:
+      type: object
+      description: Trimmed shape returned by /search.
+      properties:
+        id: { type: string }
+        title: { type: string }
+        status: { type: string }
+        priority: { $ref: "#/components/schemas/Priority" }
+        assignee: { type: [string, "null"] }
+        rank: { type: number }
+    IssueCreate:
+      type: object
+      required: [title]
+      properties:
+        title: { type: string }
+        team: { type: string }
+        priority: { $ref: "#/components/schemas/Priority" }
+        assignee: { type: string }
+        labels: { type: array, items: { type: string } }
+        project: { type: string }
+        cycle: { type: string }
+        description: { type: string }
+        estimate: { type: number }
+        dueDate: { type: string }
+        parent: { type: string }
+    IssueUpdate:
+      type: object
+      description: Partial. Any subset of these fields. Omitted fields are unchanged.
+      properties:
+        title: { type: string }
+        description: { type: string }
+        team: { type: string }
+        status: { type: string, description: Target workflow state name (drives the status transition). }
+        priority: { $ref: "#/components/schemas/Priority" }
+        assignee: { type: string, description: "Email, or 'me'." }
+        labels: { type: array, items: { type: string } }
+        project: { type: string }
+        cycle: { type: string }
+        estimate: { type: number }
+        dueDate: { type: string }
+        parent: { type: string }
+        archived: { type: boolean }
+    Comment:
+      type: object
+      properties:
+        id: { type: string }
+        author: { $ref: "#/components/schemas/User" }
+        body: { type: string }
+        parentId: { type: [string, "null"] }
+        createdAt: { type: string, format: date-time }
+        updatedAt: { type: string, format: date-time }
+        deleted: { type: boolean }
+    Project:
+      type: object
+      properties:
+        id: { type: string }
+        name: { type: string }
+        description: { type: [string, "null"] }
+        status: { type: string }
+        priority: { $ref: "#/components/schemas/Priority" }
+        lead: { oneOf: [ { $ref: "#/components/schemas/User" }, { type: "null" } ] }
+        startDate: { type: [string, "null"] }
+        targetDate: { type: [string, "null"] }
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code: { type: string }
+            message: { type: string }
