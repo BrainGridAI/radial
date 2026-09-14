@@ -1,0 +1,19 @@
+{
+  "name": "@braingridai/radial-skills",
+  "private": true,
+  "type": "module",
+  "description": "The rd-* agent skills for Radial — source, manifest and guards. Not published to npm; the CLI is published from the app repo as radial.build.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrainGridAI/radial.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "manifest": "node scripts/build-manifest.mjs",
+    "manifest:check": "node scripts/build-manifest.mjs --check",
+    "test": "node --test"
+  }
+}
