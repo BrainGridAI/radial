@@ -1,6 +1,6 @@
 ---
 name: rd-issues
-description: File a plan as a real tree in Radial, the keyboard-first issue tracker — one parent, its children, the blocked-by edges between them, and a read-back that proves every field landed. Default is backlog and unassigned; --start files the tree in progress, assigned to you, tagged with the agent that is building it. Use it in Claude Code or Codex after rd-plan. Not for writing the plan (rd-plan) or building it (rd-build).
+description: File a plan as a real tree in Radial, the keyboard-first issue tracker: one parent, its children, the blocked-by edges between them, and a read-back that proves every field landed. Default is backlog and unassigned; --start files the tree in progress, assigned to you, tagged with the agent that is building it. Use it in Claude Code or Codex after rd-plan. Not for writing the plan (rd-plan) or building it (rd-build).
 metadata:
   short-description: File a plan as a Radial issue tree
 ---
@@ -12,7 +12,7 @@ that reads every issue back. Two modes: file it for later, or start it now.
 **When to use it.** Right after `rd-plan`, once the plan has been argued with.
 
 **When not to.** Before the plan exists, or to change issues that are already
-filed — use `radial update` directly.
+filed: use `radial update` directly.
 
 ## Extensions (read this first)
 
@@ -122,7 +122,7 @@ Put the Preview URL into the parent body as a `**Prototype:**` line.
 
 [HOOK: file-bar]
 
-### 7. Read it back — this is the step that makes it true
+### 7. Read it back: the step that makes it true
 
 A create that returns 200 is not proof the field landed. For the parent and
 every child:

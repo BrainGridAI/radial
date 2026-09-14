@@ -1,6 +1,6 @@
 ---
 name: rd-triage
-description: Rank the open work in Radial, the keyboard-first issue tracker, into Now, Next, Later and Icebox using real signal — how many issues each one blocks, how old it is, whether anything has happened on it lately — then write the priorities only after you say yes. A second mode steps through the triage queue proposing a status, priority and label per item. Use it in Claude Code or Codex weekly, or when the backlog stops being readable.
+description: Rank the open work in Radial, the keyboard-first issue tracker, into Now, Next, Later and Icebox using real signal (how many issues each one blocks, how old it is, whether anything has happened on it lately), then write the priorities only after you say yes. A second mode steps through the triage queue proposing a status, priority and label per item. Use it in Claude Code or Codex weekly, or when the backlog stops being readable.
 metadata:
   short-description: Rank and triage a Radial backlog
 ---
@@ -54,11 +54,11 @@ Work on parents. A child's priority is a detail of its parent's.
 
 Four buckets, and the reason belongs in the row:
 
-- **Now** — blocks other work, or is broken in front of users, or someone is
+- **Now**: blocks other work, or is broken in front of users, or someone is
   already on it.
-- **Next** — clearly worth doing and nothing stands in its way.
-- **Later** — worth doing, not now; say what would move it up.
-- **Icebox** — you would not be sad if it never happened. Say so plainly. An
+- **Next**: clearly worth doing and nothing stands in its way.
+- **Later**: worth doing, not now; say what would move it up.
+- **Icebox**: you would not be sad if it never happened. Say so plainly. An
   honest icebox is what keeps Later credible.
 
 Signals, and what each is worth: how many issues it blocks (highest), whether

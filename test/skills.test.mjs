@@ -130,6 +130,24 @@ test('an executable inside a skill folder fails', () => {
   assert.deepEqual(lintSkills([skillFixture('rd-one')], CANONICAL), []);
 });
 
+test('an em dash in a body fails', () => {
+  const good = skillFixture('rd-one');
+  const bad = {
+    ...good,
+    files: [{ path: 'SKILL.md', content: good.files[0].content.replace('Does a thing.', 'Does a thing — twice.') }],
+  };
+  const errors = lintSkills([bad], CANONICAL);
+  assert.ok(errors.some((e) => e.includes('em dash')), errors.join('\n'));
+  assert.deepEqual(lintSkills([good], CANONICAL), []);
+});
+
+test('an em dash in the README fails', () => {
+  const manifest = buildManifest([skillFixture('rd-one')]);
+  const readme = readmeFor(manifest).replace('# Radial', '# Radial — the tracker');
+  assert.ok(lintReadme(readme, manifest).some((e) => e.includes('em dash')), 'expected an em-dash error');
+  assert.deepEqual(lintReadme(readmeFor(manifest), manifest), []);
+});
+
 test('a private-tooling string in a body fails', () => {
   const good = skillFixture('rd-one');
   const bad = {

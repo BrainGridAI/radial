@@ -1,6 +1,6 @@
 ---
 name: rd-build
-description: Work a filed tree in Radial, the keyboard-first issue tracker, child by child in dependency order — move each child to in progress, build it, check every acceptance line, run the repo's gate, drive the browse checks, post implementation notes as a comment, and move it to in review. Resumes from live issue statuses, so re-running continues instead of restarting. Use it in Claude Code or Codex after rd-issues. It never closes an issue; a human merges and closes.
+description: Work a filed tree in Radial, the keyboard-first issue tracker, child by child in dependency order: move each child to in progress, build it, check every acceptance line, run the repo's gate, drive the browse checks, post implementation notes as a comment, and move it to in review. Resumes from live issue statuses, so re-running continues instead of restarting. Use it in Claude Code or Codex after rd-issues. It never closes an issue; a human merges and closes.
 metadata:
   short-description: Build a Radial tree child by child
 ---
@@ -79,7 +79,7 @@ observed. A line you did not check is a line that failed.
 deciding the failure is unrelated; either fix it or stop and say so.
 
 **Drive the browse checks.** Run this child's numbered cases against the
-running app, now, not in a sweep at the end — by the end every child is already
+running app, now, not in a sweep at the end: by the end every child is already
 marked done and nothing can fail. A case passes only when the condition it
 states is actually on screen. A passing unit test is not evidence for a browse
 check. If you have no browser tool, say the checks were not driven and leave
@@ -111,7 +111,7 @@ anything deferred. Not a diff.
 
 Post the same kind of notes on the parent, including the branch name, then move
 the parent to in review. Then render the delivery table yourself from
-`radial show --json` on each issue — one row per issue, and a determination
+`radial show --json` on each issue: one row per issue, and a determination
 *you* make by re-reading its acceptance lines, not by trusting that code exists:
 
 | Issue | Title | Status | Determination | Comment |

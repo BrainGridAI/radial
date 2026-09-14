@@ -225,6 +225,13 @@ export function lintSkills(skills, canonicalPreamble) {
       for (const { label, re } of PRIVATE_TOOLING) {
         if (re.test(file.content)) where(`${file.path} mentions private tooling (${label})`);
       }
+      // House style, and a practical matter: these bodies are read as plain
+      // text in a terminal by two different clients, and an em dash is the
+      // single most reliable tell of machine-written prose.
+      const emDash = file.content.split('\n').findIndex((line) => line.includes('—'));
+      if (emDash !== -1) {
+        where(`${file.path}:${emDash + 1} uses an em dash; use a comma, a colon, parentheses or a new sentence`);
+      }
     }
 
     const { data, body, error } = parseFrontmatter(main.content);
@@ -356,6 +363,8 @@ export function lintManifest(skills, manifest) {
  */
 export function lintReadme(readme, manifest) {
   const errors = [];
+  const emDash = readme.split('\n').findIndex((line) => line.includes('—'));
+  if (emDash !== -1) errors.push(`README.md:${emDash + 1} uses an em dash; use a comma, a colon, parentheses or a new sentence`);
   for (const skill of manifest.skills ?? []) {
     if (!readme.includes(`\`${skill.name}\``)) errors.push(`README does not mention \`${skill.name}\``);
     for (const hook of skill.hooks ?? []) {

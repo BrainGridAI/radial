@@ -17,7 +17,7 @@ No credits, no copilots, no surprises. Bring your own agent via a first-class CL
 
 ---
 
-This is Radial's **developer surface** — the `radial` CLI, the MCP server, the REST API, and
+This is Radial's **developer surface**: the `radial` CLI, the MCP server, the REST API, and
 the `rd-*` agent skills. Built to be scripted by you and your agents. The Radial app itself
 lives at [radial.build](https://radial.build); this repo is the home of the tooling, the skills
 and the releases.
@@ -25,10 +25,10 @@ and the releases.
 ## Install
 
 ```bash
-# npm — any platform with Node 18+
+# npm (any platform with Node 18+)
 npm install -g radial.build
 
-# Homebrew — macOS / Linux
+# Homebrew (macOS / Linux)
 brew install BrainGridAI/radial/radial
 ```
 
@@ -48,7 +48,7 @@ radial show RAD-219
 Eleven skills that teach Claude Code and Codex how to work in Radial: plan a change into a
 parent and a few children, file the tree with its dependency edges, build it child by child
 leaving notes on each issue, and open a pull request that does not auto-close the siblings.
-They are prose, not scripts — no code runs on your machine that you did not read.
+They are prose, not scripts: no code runs on your machine that you did not read.
 
 **60 seconds:**
 
@@ -93,7 +93,7 @@ codex -- '$skill-installer --repo BrainGridAI/radial --path skills/rd-plan'
 | Path | What it is | Commit it? |
 | --- | --- | --- |
 | `.radial/config.json` | The team key for this repo | yes |
-| `.radial/skills/<name>/` | Your wrappers — how your team extends a skill | yes |
+| `.radial/skills/<name>/` | Your wrappers: how your team extends a skill | yes |
 | `.radial/changelog.md` | The changelog `rd-changelog` writes | yes |
 | `.radial/plans/` | Plan bodies, scaffolding for `rd-issues` | no |
 | `.radial/prototypes/` | Prototype HTML before it is attached | no |
@@ -141,7 +141,7 @@ The rules, each with its reason:
 | --- | --- |
 | Sections are named places, not line numbers | The built-in can be rewritten without breaking your wrapper |
 | A wrapper adds rules and raises bars; it cannot remove a step or lower a bar | Otherwise an extension could quietly disable the check that mattered |
-| The nearest scope wins **whole** — project beats user, never merged | Two half-applied rule sets is the worst of both |
+| The nearest scope wins **whole**: project beats user, never merged | Two half-applied rule sets is the worst of both |
 | Two wrappers in one scope extending one skill: neither applies | Silent precedence is worse than a loud refusal |
 | `rd-*` names are reserved | So an update never fights your wrapper for a name |
 
@@ -157,7 +157,7 @@ The pack is MIT and lives in [`skills/`](./skills). Copy
 
 ```bash
 npm run manifest   # regenerate skills/manifest.json
-npm test           # the guards — zero dependencies, node --test
+npm test           # the guards: zero dependencies, node --test
 ```
 
 The guards enforce the things that rot: the manifest matches the folders, every hook marker is
@@ -174,7 +174,7 @@ folder, and this README lists every skill and every hook.
 | `radial list` | List issues. `--assignee`, `--status`, `--label`, `--team`, `--priority`, `--json` |
 | `radial show RAD-219` | Full detail + comments |
 | `radial close RAD-219` | Close, with optional `-m "message"` |
-| `radial skills <sub>` | `install` · `update` · `list` · `remove` · `extend` — the `rd-*` agent skills |
+| `radial skills <sub>` | `install` · `update` · `list` · `remove` · `extend` for the `rd-*` agent skills |
 | `radial triage` | Step through the triage queue |
 | `radial search <query>` | The same fast index the app uses |
 | `radial branch RAD-219` | The suggested git branch name for an issue |
@@ -189,13 +189,13 @@ Add `--json` to any read command to pipe into `jq` and friends.
 
 Point any MCP-capable agent (Claude, etc.) at Radial.
 
-**Remote (recommended)** — authorizes over OAuth in the browser, no keys to paste:
+**Remote (recommended)** authorizes over OAuth in the browser, no keys to paste:
 
 ```json
 { "mcpServers": { "radial": { "url": "https://mcp.radial.build" } } }
 ```
 
-**Local stdio** — run the server yourself, using your `radial auth` session:
+**Local stdio** runs the server yourself, using your `radial auth` session:
 
 ```json
 { "mcpServers": { "radial": { "command": "radial", "args": ["mcp"] } } }
@@ -220,9 +220,9 @@ Full reference at [radial.build/developers](https://radial.build/developers).
 ## Configuration
 
 State lives in `~/.config/radial/config.json` (mode `0600`). Override endpoints with
-`RADIAL_API_URL`, `RADIAL_AUTH_URL`, `RADIAL_MCP_URL` — handy for self-hosting. The skills
+`RADIAL_API_URL`, `RADIAL_AUTH_URL`, `RADIAL_MCP_URL`, handy for self-hosting. The skills
 installer reads `RADIAL_SKILLS_URL` the same way.
 
 ## License
 
-MIT — see [LICENSE](./LICENSE).
+MIT. See [LICENSE](./LICENSE).

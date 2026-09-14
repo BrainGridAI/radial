@@ -1,6 +1,6 @@
 ---
 name: rd-changelog
-description: Write the changelog from what actually shipped in Radial, the keyboard-first issue tracker — the issues completed since a date or a tag, read as Feature, Improvement and Fix entries in customer language rather than issue titles. Prepends a dated section to .radial/changelog.md by default, and an output hook sends it anywhere else. Asks instead of guessing when an issue reads as internal. Use it in Claude Code or Codex at a release, or at the end of a week.
+description: Write the changelog from what actually shipped in Radial, the keyboard-first issue tracker: the issues completed since a date or a tag, read as Feature, Improvement and Fix entries in customer language rather than issue titles. Prepends a dated section to .radial/changelog.md by default, and an output hook sends it anywhere else. Asks instead of guessing when an issue reads as internal. Use it in Claude Code or Codex at a release, or at the end of a week.
 metadata:
   short-description: Write a changelog from completed Radial issues
 ---
@@ -38,7 +38,7 @@ already in the changelog file, and say which date you chose.
 radial list --team RAD --status done --json
 ```
 
-Page with `--cursor`, then filter on `completedAt` falling inside the window —
+Page with `--cursor`, then filter on `completedAt` falling inside the window,
 not on `updatedAt`, which a label change bumps. Prefer parents: a tree's six
 children are one entry, not six.
 

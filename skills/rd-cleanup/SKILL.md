@@ -1,6 +1,6 @@
 ---
 name: rd-cleanup
-description: Find the stranded work in Radial, the keyboard-first issue tracker — open children under a parent that is already done, and issues sitting in progress with no activity for weeks — and decide each one on evidence: a merged pull request or a commit naming it means close it, no evidence means promote it to standalone. Shows a read-only table first and applies nothing until you say yes. Use it in Claude Code or Codex monthly, or after a big tree merges.
+description: Find the stranded work in Radial, the keyboard-first issue tracker (open children under a parent that is already done, and issues sitting in progress with no activity for weeks) and decide each one on evidence: a merged pull request or a commit naming it means close it, no evidence means promote it to standalone. Shows a read-only table first and applies nothing until you say yes. Use it in Claude Code or Codex monthly, or after a big tree merges.
 metadata:
   short-description: Close or promote stranded Radial issues
 ---
@@ -26,7 +26,7 @@ Before anything else, look for wrappers that extend this skill.
 
 ## How it runs
 
-### Sweep 1 — open children under a completed parent
+### Sweep 1: open children under a completed parent
 
 ```
 radial list --team RAD --all --json
@@ -36,27 +36,27 @@ Page through with `--cursor`. Find every issue whose `parent` is an issue in a
 `completed` status while the child itself is not. For each one, look for
 evidence that the work actually happened:
 
-- `radial show <child> --team RAD --json` — the comments and relations. An
+- `radial show <child> --team RAD --json` for the comments and relations. An
   implementation-notes comment is strong evidence.
-- `radial activity <child> --team RAD` — did it ever reach in review?
-- `git log --all --grep "<KEY-n>" --oneline` — a commit naming the id.
+- `radial activity <child> --team RAD`: did it ever reach in review?
+- `git log --all --grep "<KEY-n>" --oneline` for a commit naming the id.
 - `gh pr list --search "<KEY-n>" --state merged` when `gh` exists.
 
 [HOOK: evidence-bar]
 
 The bar for each verdict:
 
-- **close** — there is a merged pull request or a commit that names this id, or
+- **close**: there is a merged pull request or a commit that names this id, or
   a notes comment describing what shipped. Quote it.
-- **promote** — no such evidence. The work was never done, and it is now
+- **promote**: no such evidence. The work was never done, and it is now
   hidden under a parent nobody will reopen. Detach it so it can be seen.
-- **ask** — evidence points both ways. Say what you found and let the user
+- **ask**: evidence points both ways. Say what you found and let the user
   decide. There is no shame in this row; a wrong close is worse.
 
 Never infer "done" from the parent being done. That inference is exactly the
 bug this sweep exists to undo.
 
-### Sweep 2 — in progress, but nothing is happening
+### Sweep 2: in progress, but nothing is happening
 
 Issues in a `started` status whose last activity is older than N days (default
 21; take N from the user if they give one). Read `radial activity <id>` for the

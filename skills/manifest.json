@@ -3,15 +3,15 @@
   "skills": [
     {
       "name": "rd-build",
-      "description": "Work a filed tree in Radial, the keyboard-first issue tracker, child by child in dependency order — move each child to in progress, build it, check every acceptance line, run the repo's gate, drive the browse checks, post implementation notes as a comment, and move it to in review. Resumes from live issue statuses, so re-running continues instead of restarting. Use it in Claude Code or Codex after rd-issues. It never closes an issue; a human merges and closes.",
+      "description": "Work a filed tree in Radial, the keyboard-first issue tracker, child by child in dependency order: move each child to in progress, build it, check every acceptance line, run the repo's gate, drive the browse checks, post implementation notes as a comment, and move it to in review. Resumes from live issue statuses, so re-running continues instead of restarting. Use it in Claude Code or Codex after rd-issues. It never closes an issue; a human merges and closes.",
       "shortDescription": "Build a Radial tree child by child",
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "cc9df3d532c3f9f42c2dbe6913674f4dff5b82e93d2e9101fc936e31ce3ed545"
+          "sha256": "8d1f96a0658ad0a066b3ee062b1e9c07ee2f2dd9601c74851d29376d1d70443f"
         }
       ],
-      "sha256": "8e203da4a42cd6f06e3b8367e481fe8e9f441471e6540a4e2258ffc43f1da441",
+      "sha256": "2da07814ec5dd844708648d6f883e66f644ff0c79036ff27a8247095fd031764",
       "hooks": [
         "before-child",
         "extra-checks",
@@ -22,15 +22,15 @@
     },
     {
       "name": "rd-changelog",
-      "description": "Write the changelog from what actually shipped in Radial, the keyboard-first issue tracker — the issues completed since a date or a tag, read as Feature, Improvement and Fix entries in customer language rather than issue titles. Prepends a dated section to .radial/changelog.md by default, and an output hook sends it anywhere else. Asks instead of guessing when an issue reads as internal. Use it in Claude Code or Codex at a release, or at the end of a week.",
+      "description": "Write the changelog from what actually shipped in Radial, the keyboard-first issue tracker: the issues completed since a date or a tag, read as Feature, Improvement and Fix entries in customer language rather than issue titles. Prepends a dated section to .radial/changelog.md by default, and an output hook sends it anywhere else. Asks instead of guessing when an issue reads as internal. Use it in Claude Code or Codex at a release, or at the end of a week.",
       "shortDescription": "Write a changelog from completed Radial issues",
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "9b14edf222dcdda523bd5bfe436916a57d372fed251d3519a4fdf2adf4396e52"
+          "sha256": "2786221489c60ee65d6e889fafb13b7c86ef48a97a9b5b223b965c7b4b6183f7"
         }
       ],
-      "sha256": "79735a6ae25b81f0ef056447e68a6cf28a94c6a659f6ccf010e5cb604898bdbf",
+      "sha256": "a544c2da95511098bd7635d0b7ab14ad036f4f9ea75062f5096a0a44d55c96a7",
       "hooks": [
         "extra-sources",
         "entry-bar",
@@ -39,15 +39,15 @@
     },
     {
       "name": "rd-cleanup",
-      "description": "Find the stranded work in Radial, the keyboard-first issue tracker — open children under a parent that is already done, and issues sitting in progress with no activity for weeks — and decide each one on evidence: a merged pull request or a commit naming it means close it, no evidence means promote it to standalone. Shows a read-only table first and applies nothing until you say yes. Use it in Claude Code or Codex monthly, or after a big tree merges.",
+      "description": "Find the stranded work in Radial, the keyboard-first issue tracker (open children under a parent that is already done, and issues sitting in progress with no activity for weeks) and decide each one on evidence: a merged pull request or a commit naming it means close it, no evidence means promote it to standalone. Shows a read-only table first and applies nothing until you say yes. Use it in Claude Code or Codex monthly, or after a big tree merges.",
       "shortDescription": "Close or promote stranded Radial issues",
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "20046909bef8216d51b1d1e116dcd368834d0f3deeebc289796dd7315f1c0a55"
+          "sha256": "70aa6a402082bd08453e3b61628f28163608416172b3c3b4265379fd31875f58"
         }
       ],
-      "sha256": "18bc977ba075e3a933acd09f86a0e7f8420c60e99efa3a90cca190a8ab3dcfa4",
+      "sha256": "91c61389c34666bcddec9f8acd4a9406c54f4b92f855c264dc2ee0cda154381b",
       "hooks": [
         "evidence-bar",
         "extra-sweeps",
@@ -56,15 +56,15 @@
     },
     {
       "name": "rd-issues",
-      "description": "File a plan as a real tree in Radial, the keyboard-first issue tracker — one parent, its children, the blocked-by edges between them, and a read-back that proves every field landed. Default is backlog and unassigned; --start files the tree in progress, assigned to you, tagged with the agent that is building it. Use it in Claude Code or Codex after rd-plan. Not for writing the plan (rd-plan) or building it (rd-build).",
+      "description": "File a plan as a real tree in Radial, the keyboard-first issue tracker: one parent, its children, the blocked-by edges between them, and a read-back that proves every field landed. Default is backlog and unassigned; --start files the tree in progress, assigned to you, tagged with the agent that is building it. Use it in Claude Code or Codex after rd-plan. Not for writing the plan (rd-plan) or building it (rd-build).",
       "shortDescription": "File a plan as a Radial issue tree",
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "abb55b916f8f459c03ae09ec573bdbd43df3bf9586bcbb388d66d17608d0612c"
+          "sha256": "bb6145353baa37af39012f93d117ba1252ac1c5de131ae63dcbd2f83e5541ccd"
         }
       ],
-      "sha256": "4f1ed6ee8d3b7e826379918fe120631dc5672d7acb666059221912ae237fa985",
+      "sha256": "e778bdce5ee7dc1955b4e3e765562bdacc82215384eba6ec3f8502af2c183201",
       "hooks": [
         "extra-fields",
         "file-bar",
@@ -73,19 +73,19 @@
     },
     {
       "name": "rd-plan",
-      "description": "Turn an idea into a plan for Radial, the keyboard-first issue tracker — one parent issue plus two to four children, each with a goal, a file list and acceptance criteria anyone can check. Writes the plan to .radial/plans/<slug>.md and creates nothing, so you can argue with it before it becomes a tree. Use it in Claude Code or Codex before starting work of more than an hour. Not for filing the tree (rd-issues) or for building it (rd-build).",
+      "description": "Turn an idea into a plan for Radial, the keyboard-first issue tracker: one parent issue plus two to four children, each with a goal, a file list and acceptance criteria anyone can check. Writes the plan to .radial/plans/<slug>.md and creates nothing, so you can argue with it before it becomes a tree. Use it in Claude Code or Codex before starting work of more than an hour. Not for filing the tree (rd-issues) or for building it (rd-build).",
       "shortDescription": "Plan a change as a Radial parent and children",
       "files": [
         {
           "path": "references/issue-body.md",
-          "sha256": "bc3ea9a3579008317386a1a7f4451aee713d2e4f44b891892cd1f07bda0ad0c6"
+          "sha256": "5ab0a82f9342ac51f29aa40b5fc1c574e77549c954fb410c41a98b7dd9d30c41"
         },
         {
           "path": "SKILL.md",
-          "sha256": "856b3daff0cbc571d8d0f36e25fe3d5ce6b66678dafabde354470c4f35d5175a"
+          "sha256": "a8f56bccbf93e310d230d065680507b520e3d385f4d9b357996c0f5da521366c"
         }
       ],
-      "sha256": "51ec392bbcd093dc100ae13e6856a3cb50ada53744345cbef596e6a0db67260e",
+      "sha256": "b011051290da856ff4abbfceb0a2e7f008fd5f37b82a6a32c610c3653cd89091",
       "hooks": [
         "extra-questions",
         "extra-sections",
@@ -96,15 +96,15 @@
     },
     {
       "name": "rd-pr",
-      "description": "Open the pull request for a tree in Radial, the keyboard-first issue tracker — branch named from the issue, base synced, gate green, and every issue id in the PR text rewritten except the branch's own, so merging cannot silently close sibling issues. After the merge it re-reads each mentioned issue and restores any status that flipped. Use it in Claude Code or Codex once rd-build has left the tree in review. Not for closing issues; a human does that.",
+      "description": "Open the pull request for a tree in Radial, the keyboard-first issue tracker, with a branch named from the issue, the base synced, the gate green, and every issue id in the PR text rewritten except the branch's own, so merging cannot silently close sibling issues. After the merge it re-reads each mentioned issue and restores any status that flipped. Use it in Claude Code or Codex once rd-build has left the tree in review. Not for closing issues; a human does that.",
       "shortDescription": "Open a pull request for a Radial tree",
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "d391b15877ce91893e89ff61ef65388498cb5761461811108c11851e5262cdbf"
+          "sha256": "0980a15dae26beb43718eb5ba329f4341af3b38471ee5a84845036cdeccd1a4a"
         }
       ],
-      "sha256": "9da19f316740bd1bb8517e572a61e00492df6b0941e6fe744af55c074ba6e5e0",
+      "sha256": "aea9349af0c0782cb2df87e4ee12f842fe6113529b5eda7770f9e266a12ffe46",
       "hooks": [
         "extra-checks",
         "extra-sections",
@@ -133,15 +133,15 @@
     },
     {
       "name": "rd-retro",
-      "description": "Audit one finished build against the rd-* workflow using only what Radial, the keyboard-first issue tracker, and git already hold — the tree, its activity, its comments, the pull request and the commits. Scores each rule with the evidence behind it, lists where time was wasted, and phrases every improvement as a wrapper section you can paste into .radial/skills/. Writes nothing. Use it in Claude Code or Codex after a tree ships, or on any tree that went badly.",
+      "description": "Audit one finished build against the rd-* workflow using only what Radial, the keyboard-first issue tracker, and git already hold: the tree, its activity, its comments, the pull request and the commits. Scores each rule with the evidence behind it, lists where time was wasted, and phrases every improvement as a wrapper section you can paste into .radial/skills/. Writes nothing. Use it in Claude Code or Codex after a tree ships, or on any tree that went badly.",
       "shortDescription": "Audit a finished Radial build against the workflow",
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "81191f53347e37561f4e034039b0dced7e7ef593e4b1cd08ba41adcf83472514"
+          "sha256": "d3c0b41a1fc0707360ddfc82ce458b7377dceecc02b0e44b3c698f42aa67a552"
         }
       ],
-      "sha256": "4df44bd8d1de361d8a600b32a72a04869eee7257eb7a0325655a86d40f3fff6c",
+      "sha256": "ef5111ed3427a928fefab2c67d0964b13676df7a8dbbfde8df44f3f9ba3e18f9",
       "hooks": [
         "extra-rules",
         "score-bar",
@@ -155,10 +155,10 @@
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "75c044aaa5b960b273fda104f10ec4ff8cb62675e7847aa2b9e996b7d0e20ff7"
+          "sha256": "77c45a6c86c4ae7ab5c1e397a7164d4a34cf7e0083e412c017ab77a507048d3f"
         }
       ],
-      "sha256": "6eda648797dc0af9d450ab1852f6a32013efdfbf46707cf4ca44960b6b296f25",
+      "sha256": "3312fd75ec5611d8185b3817fa01ff943c6968943b34058e8a9b9f815a96e91d",
       "hooks": [
         "extra-checks",
         "extra-config",
@@ -167,15 +167,15 @@
     },
     {
       "name": "rd-triage",
-      "description": "Rank the open work in Radial, the keyboard-first issue tracker, into Now, Next, Later and Icebox using real signal — how many issues each one blocks, how old it is, whether anything has happened on it lately — then write the priorities only after you say yes. A second mode steps through the triage queue proposing a status, priority and label per item. Use it in Claude Code or Codex weekly, or when the backlog stops being readable.",
+      "description": "Rank the open work in Radial, the keyboard-first issue tracker, into Now, Next, Later and Icebox using real signal (how many issues each one blocks, how old it is, whether anything has happened on it lately), then write the priorities only after you say yes. A second mode steps through the triage queue proposing a status, priority and label per item. Use it in Claude Code or Codex weekly, or when the backlog stops being readable.",
       "shortDescription": "Rank and triage a Radial backlog",
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "c2092910d1d8ef9ed796fe830787ab56029c72d6a31d63bc394684b3ba130980"
+          "sha256": "eed70c276c0e984e822f36005b351b2d617129cfaf0ec7739843fe67f4402e43"
         }
       ],
-      "sha256": "295a0fd8f0e509c45180723c69ff4940ff8bd963bf813b871da580a3709213bc",
+      "sha256": "ec704e5c6aafbddc089c19861787e37c54760f0bf34d765ec68ce54fed750261",
       "hooks": [
         "extra-signals",
         "rank-bar",

@@ -6,7 +6,7 @@ metadata:
 ---
 
 <!--
-  TEMPLATE — not a real skill. The leading underscore keeps `_template/` out of
+  TEMPLATE, not a real skill. The leading underscore keeps `_template/` out of
   the manifest and out of every install.
 
   The body order below is fixed and the guard test enforces it, because
@@ -15,7 +15,7 @@ metadata:
     1. Summary + When to use / When not to
     2. "## Extensions (read this first)"  ← copied byte for byte into every skill
     3. The procedure, with `[HOOK: name]` markers
-    4. "## Extension points" — one table row per marker, in marker order
+    4. "## Extension points": one table row per marker, in marker order
     5. "## What it never does"
 
   Marker rules:

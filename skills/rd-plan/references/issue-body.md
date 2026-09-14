@@ -113,7 +113,7 @@ Neither has the context you have right now.
 ## Where the bodies live
 
 `rd-plan` writes every body of one plan into a single file,
-`.radial/plans/<slug>.md`, with the parent first and a `## C1 — <title>`
+`.radial/plans/<slug>.md`, with the parent first and a `## C1: <title>`
 heading per child. `rd-issues` reads that file and files each body with
 `radial create --description-file`, because `-d` is inline text: passing a path
 to `-d` stores the literal path as the description.

@@ -1,6 +1,6 @@
 ---
 name: rd-pr
-description: Open the pull request for a tree in Radial, the keyboard-first issue tracker — branch named from the issue, base synced, gate green, and every issue id in the PR text rewritten except the branch's own, so merging cannot silently close sibling issues. After the merge it re-reads each mentioned issue and restores any status that flipped. Use it in Claude Code or Codex once rd-build has left the tree in review. Not for closing issues; a human does that.
+description: Open the pull request for a tree in Radial, the keyboard-first issue tracker, with a branch named from the issue, the base synced, the gate green, and every issue id in the PR text rewritten except the branch's own, so merging cannot silently close sibling issues. After the merge it re-reads each mentioned issue and restores any status that flipped. Use it in Claude Code or Codex once rd-build has left the tree in review. Not for closing issues; a human does that.
 metadata:
   short-description: Open a pull request for a Radial tree
 ---
@@ -12,7 +12,7 @@ it checks what the merge actually did to the tree and repairs it.
 **When to use it.** Every child is in review and the gate is green.
 
 **When not to.** Mid-build, or when a pull request already exists for this
-branch — push to that one instead.
+branch: push to that one instead.
 
 ## Extensions (read this first)
 
@@ -62,7 +62,7 @@ existing message convention: read the last twenty subjects with
 The branch's own issue id belongs in the commit subject or trailer. Sibling ids
 do not.
 
-### 5. Write the body — and scrub the ids
+### 5. Write the body, and scrub the ids
 
 The trap: GitHub closes an issue when a merged pull request body says
 `closes RAD-12`, and several trackers close on a bare id too. A body that lists
@@ -76,7 +76,7 @@ So, in the pull request title and body:
   non-breaking hyphen (`RAD‑34`) or the words (`issue 34`). Say in the body
   which convention you used, so a reader is not confused by the lookalike.
 - No `closes`, `fixes` or `resolves` keyword in front of any id but the
-  branch's own — and not even then, if this tree should end in review rather
+  branch's own, and not even then, if this tree should end in review rather
   than closed.
 
 Before you create the pull request, grep your own body text for `KEY-` and

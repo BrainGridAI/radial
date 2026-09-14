@@ -13,7 +13,7 @@ block in `CLAUDE.md` and `AGENTS.md`, and the `rd-*` pack installed.
 **When to use it.** First time in a repo, on a new machine, or when another
 `rd-*` skill stops because it cannot resolve the team key.
 
-**When not to.** To file or plan work — that is `rd-plan` then `rd-issues`.
+**When not to.** To file or plan work: that is `rd-plan` then `rd-issues`.
 
 ## Extensions (read this first)
 

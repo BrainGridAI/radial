@@ -1,6 +1,6 @@
 ---
 name: rd-retro
-description: Audit one finished build against the rd-* workflow using only what Radial, the keyboard-first issue tracker, and git already hold — the tree, its activity, its comments, the pull request and the commits. Scores each rule with the evidence behind it, lists where time was wasted, and phrases every improvement as a wrapper section you can paste into .radial/skills/. Writes nothing. Use it in Claude Code or Codex after a tree ships, or on any tree that went badly.
+description: Audit one finished build against the rd-* workflow using only what Radial, the keyboard-first issue tracker, and git already hold: the tree, its activity, its comments, the pull request and the commits. Scores each rule with the evidence behind it, lists where time was wasted, and phrases every improvement as a wrapper section you can paste into .radial/skills/. Writes nothing. Use it in Claude Code or Codex after a tree ships, or on any tree that went badly.
 metadata:
   short-description: Audit a finished Radial build against the workflow
 ---
@@ -75,7 +75,7 @@ The bar for the scorecard:
 List the gaps: the long pause between two events, the child that went to in
 review and came back, the gate that ran three times, the comment thread that
 looks like a decision being re-litigated. Each with the two timestamps and the
-minutes between them. Do not guess at causes you cannot see in the record — say
+minutes between them. Do not guess at causes you cannot see in the record: say
 "a 90-minute gap with no events" and let the reader fill it in.
 
 ### 4. Up to three proposals, each installable
