@@ -1,0 +1,24 @@
+name: skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # The manifest is generated, and three other things read it (the CLI
+      # installer, the docs hook tables, the guard below). A hand edit that
+      # drifts from the folders would ship a wrong hash, so fail here instead.
+      - name: manifest is current
+        run: npm run manifest:check
+
+      - name: guards
+        run: npm test
