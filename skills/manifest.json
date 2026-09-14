@@ -8,10 +8,10 @@
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "8d1f96a0658ad0a066b3ee062b1e9c07ee2f2dd9601c74851d29376d1d70443f"
+          "sha256": "32cec3fd21e9772b2f4215dafa2e611f05c2fcc4530fe2c528288c00931b7daa"
         }
       ],
-      "sha256": "2da07814ec5dd844708648d6f883e66f644ff0c79036ff27a8247095fd031764",
+      "sha256": "592050a10c37a4cea901b109aeb3c26455c6da5c843760834f3cbdf0020859db",
       "hooks": [
         "before-child",
         "extra-checks",
@@ -138,10 +138,10 @@
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "d3c0b41a1fc0707360ddfc82ce458b7377dceecc02b0e44b3c698f42aa67a552"
+          "sha256": "1db520a764772971fbacfbcf8b9b9ba9458ac616a477ed65acb5339c96548f7a"
         }
       ],
-      "sha256": "ef5111ed3427a928fefab2c67d0964b13676df7a8dbbfde8df44f3f9ba3e18f9",
+      "sha256": "fb5903fd80837443986551c032b1a9fe956248db443ab47e579d51e8da90ac05",
       "hooks": [
         "extra-rules",
         "score-bar",
@@ -155,10 +155,10 @@
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "77c45a6c86c4ae7ab5c1e397a7164d4a34cf7e0083e412c017ab77a507048d3f"
+          "sha256": "c3e6db1adf81d9a6ebbc137e0472c93bc986469cc8c8e33426250b02977c4b19"
         }
       ],
-      "sha256": "3312fd75ec5611d8185b3817fa01ff943c6968943b34058e8a9b9f815a96e91d",
+      "sha256": "62338bed4fa3d5a290c914680dc1d6e86000bc398d520f2d7d1d5170bf908e6f",
       "hooks": [
         "extra-checks",
         "extra-config",

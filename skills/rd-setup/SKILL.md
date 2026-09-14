@@ -141,7 +141,7 @@ One table, one row per item, with what you actually observed:
 
 | Hook | Where it fires | What a section here can add |
 | --- | --- | --- |
-| `extra-checks` | After the session check, before the team is chosen | Preconditions this org needs: an SSO reminder, a required key scope, a proxy setting |
+| `extra-checks` | After the session check, before the team is chosen | Preconditions this team needs: an SSO reminder, a required key scope, a proxy setting |
 | `extra-config` | After `.radial/config.json` is written | More files to write or values to record: a default project, a label convention, a CODEOWNERS entry |
 | `after-setup` | After the pack installs, before the report | Follow-ups: install a wrapper, open a first issue, post to chat |
 

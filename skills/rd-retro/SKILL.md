@@ -31,9 +31,13 @@ Before anything else, look for wrappers that extend this skill.
 
 ```
 radial show RAD-374 --team RAD --json
-radial list --team RAD --parent RAD-374 --json
+radial list --team RAD --all --json
 radial activity RAD-375 --team RAD
 ```
+
+`list` has no parent filter, so page it with `--cursor` and keep the issues
+whose `parent` is your parent id; passing `--parent` to `list` is accepted and
+ignored, and returns the whole team.
 
 Then, per child, its comments (in the `show --json` output) and its activity.
 From git: `git log --grep "RAD-374" --oneline --all` and, where `gh` exists,

@@ -31,8 +31,12 @@ Before anything else, look for wrappers that extend this skill.
 
 ```
 radial show RAD-374 --team RAD --json
-radial list --team RAD --parent RAD-374 --json
+radial list --team RAD --all --json
 ```
+
+`list` has no parent filter, so page it with `--cursor` and keep the issues
+whose `parent` is your parent id. Do not pass `--parent` to `list`: it is
+accepted and ignored, and you get the whole team back looking like a tree.
 
 The live statuses are the state of the run, not your memory of it:
 
