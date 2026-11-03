@@ -1,0 +1,176 @@
+{
+ "at": "2026-11-02T15:52:29-0800",
+ "surface": "https://mcp.linear.app/mcp",
+ "flow": "create(T1) list next(T2) claim+start(T2) proof comment(T3) done(T4) done-note(T4)",
+ "n": 5,
+ "median_ms": 3187.3,
+ "min_ms": 2608.0,
+ "max_ms": 3292.5,
+ "trials": [
+  {
+   "trial": 0,
+   "issue": "RAD-5",
+   "calls": [
+    {
+     "tool": "save_issue",
+     "ms": 773.4
+    },
+    {
+     "tool": "list_issues",
+     "ms": 274.4
+    },
+    {
+     "tool": "save_issue",
+     "ms": 720.3
+    },
+    {
+     "tool": "save_comment",
+     "ms": 437.7
+    },
+    {
+     "tool": "save_issue",
+     "ms": 667.4
+    },
+    {
+     "tool": "save_comment",
+     "ms": 418.3
+    }
+   ],
+   "n_calls": 6,
+   "wall_ms": 3292.5,
+   "bytes": 9137
+  },
+  {
+   "trial": 1,
+   "issue": "RAD-6",
+   "calls": [
+    {
+     "tool": "save_issue",
+     "ms": 466.4
+    },
+    {
+     "tool": "list_issues",
+     "ms": 474.9
+    },
+    {
+     "tool": "save_issue",
+     "ms": 1051.4
+    },
+    {
+     "tool": "save_comment",
+     "ms": 357.3
+    },
+    {
+     "tool": "save_issue",
+     "ms": 548.2
+    },
+    {
+     "tool": "save_comment",
+     "ms": 310.3
+    }
+   ],
+   "n_calls": 6,
+   "wall_ms": 3209.3,
+   "bytes": 9143
+  },
+  {
+   "trial": 2,
+   "issue": "RAD-7",
+   "calls": [
+    {
+     "tool": "save_issue",
+     "ms": 508.8
+    },
+    {
+     "tool": "list_issues",
+     "ms": 198.8
+    },
+    {
+     "tool": "save_issue",
+     "ms": 748.2
+    },
+    {
+     "tool": "save_comment",
+     "ms": 311.9
+    },
+    {
+     "tool": "save_issue",
+     "ms": 640.6
+    },
+    {
+     "tool": "save_comment",
+     "ms": 431.3
+    }
+   ],
+   "n_calls": 6,
+   "wall_ms": 2840.7,
+   "bytes": 9143
+  },
+  {
+   "trial": 3,
+   "issue": "RAD-8",
+   "calls": [
+    {
+     "tool": "save_issue",
+     "ms": 513.6
+    },
+    {
+     "tool": "list_issues",
+     "ms": 269.8
+    },
+    {
+     "tool": "save_issue",
+     "ms": 750.3
+    },
+    {
+     "tool": "save_comment",
+     "ms": 463.4
+    },
+    {
+     "tool": "save_issue",
+     "ms": 654.6
+    },
+    {
+     "tool": "save_comment",
+     "ms": 534.6
+    }
+   ],
+   "n_calls": 6,
+   "wall_ms": 3187.3,
+   "bytes": 9143
+  },
+  {
+   "trial": 4,
+   "issue": "RAD-9",
+   "calls": [
+    {
+     "tool": "save_issue",
+     "ms": 533.5
+    },
+    {
+     "tool": "list_issues",
+     "ms": 216.3
+    },
+    {
+     "tool": "save_issue",
+     "ms": 624.8
+    },
+    {
+     "tool": "save_comment",
+     "ms": 304.6
+    },
+    {
+     "tool": "save_issue",
+     "ms": 505.3
+    },
+    {
+     "tool": "save_comment",
+     "ms": 422.6
+    }
+   ],
+   "n_calls": 6,
+   "wall_ms": 2608.0,
+   "bytes": 9143
+  }
+ ]
+}

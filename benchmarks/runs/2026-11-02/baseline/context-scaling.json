@@ -1,0 +1,23 @@
+[
+ {
+  "decisions": 50,
+  "tasks": 12,
+  "DECISIONS_md_bytes": 6535,
+  "TODO_md_bytes": 790,
+  "full_read_bytes_if_agent_cats_both": 7325
+ },
+ {
+  "decisions": 200,
+  "tasks": 50,
+  "DECISIONS_md_bytes": 25808,
+  "TODO_md_bytes": 3108,
+  "full_read_bytes_if_agent_cats_both": 28916
+ },
+ {
+  "decisions": 1000,
+  "tasks": 250,
+  "DECISIONS_md_bytes": 128992,
+  "TODO_md_bytes": 15459,
+  "full_read_bytes_if_agent_cats_both": 144451
+ }
+]

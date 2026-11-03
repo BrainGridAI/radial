@@ -1,0 +1,83 @@
+{
+ "cmd": [
+  "bun",
+  ".context/radial-cli/cli/src/index.ts",
+  "help"
+ ],
+ "n": 10,
+ "median_ms": 27.3,
+ "p10_ms": 26.72,
+ "p90_ms": 28.78,
+ "trials": [
+  {
+   "i": 0,
+   "ms": 27.16,
+   "rc": 0,
+   "stdout_bytes": 4250,
+   "stderr_bytes": 0
+  },
+  {
+   "i": 1,
+   "ms": 27.15,
+   "rc": 0,
+   "stdout_bytes": 4250,
+   "stderr_bytes": 0
+  },
+  {
+   "i": 2,
+   "ms": 27.24,
+   "rc": 0,
+   "stdout_bytes": 4250,
+   "stderr_bytes": 0
+  },
+  {
+   "i": 3,
+   "ms": 26.19,
+   "rc": 0,
+   "stdout_bytes": 4250,
+   "stderr_bytes": 0
+  },
+  {
+   "i": 4,
+   "ms": 29.41,
+   "rc": 0,
+   "stdout_bytes": 4250,
+   "stderr_bytes": 0
+  },
+  {
+   "i": 5,
+   "ms": 27.37,
+   "rc": 0,
+   "stdout_bytes": 4250,
+   "stderr_bytes": 0
+  },
+  {
+   "i": 6,
+   "ms": 26.78,
+   "rc": 0,
+   "stdout_bytes": 4250,
+   "stderr_bytes": 0
+  },
+  {
+   "i": 7,
+   "ms": 27.42,
+   "rc": 0,
+   "stdout_bytes": 4250,
+   "stderr_bytes": 0
+  },
+  {
+   "i": 8,
+   "ms": 28.19,
+   "rc": 0,
+   "stdout_bytes": 4250,
+   "stderr_bytes": 0
+  },
+  {
+   "i": 9,
+   "ms": 28.71,
+   "rc": 0,
+   "stdout_bytes": 4250,
+   "stderr_bytes": 0
+  }
+ ]
+}

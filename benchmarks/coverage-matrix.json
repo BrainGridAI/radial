@@ -1,0 +1,1214 @@
+{
+ "as_of": "2026-11-02",
+ "radial_commit": "9126321a3edfc7f26f2f5054d6cc1601dfca413b",
+ "scoring": "yes = 1, partial = 0.5, no / unknown / none-official = 0. 'unknown' means the vendor does not publish it; the live phase resolves it.",
+ "surfaces": {
+  "radial_mcp": {
+   "label": "MEASURED (grep of src/lib/mcp/tools.ts at commit)",
+   "count": 44,
+   "tools": [
+    "create_issue",
+    "update_issue",
+    "search_issues",
+    "list_issues",
+    "comment",
+    "get_issue",
+    "list_comments",
+    "attach_file",
+    "list_attachments",
+    "delete_attachment",
+    "delete_comment",
+    "list_relations",
+    "add_relation",
+    "remove_relation",
+    "delete_issue",
+    "bulk_update_issues",
+    "move_issue",
+    "close_issue",
+    "list_notifications",
+    "mark_notification_read",
+    "get_issue_activity",
+    "get_build_rollup",
+    "get_build",
+    "search_build_events",
+    "list_recent_activity",
+    "get_workspace",
+    "list_projects",
+    "get_project",
+    "create_project",
+    "update_project",
+    "delete_project",
+    "list_teams",
+    "create_team",
+    "update_team",
+    "delete_team",
+    "list_labels",
+    "create_label",
+    "update_label",
+    "delete_label",
+    "list_cycles",
+    "create_cycle",
+    "update_cycle",
+    "delete_cycle",
+    "triage_queue"
+   ]
+  },
+  "radial_stdio_mcp": {
+   "label": "MEASURED (grep of cli/src/mcp.ts) and MEASURED tools/list over stdio = 41",
+   "count": 41,
+   "tools": [
+    "create_issue",
+    "update_issue",
+    "search_issues",
+    "list_issues",
+    "comment",
+    "get_issue",
+    "list_comments",
+    "delete_comment",
+    "list_relations",
+    "add_relation",
+    "remove_relation",
+    "delete_issue",
+    "bulk_update_issues",
+    "move_issue",
+    "close_issue",
+    "get_workspace",
+    "list_notifications",
+    "mark_notification_read",
+    "get_issue_activity",
+    "get_build_rollup",
+    "get_build",
+    "search_build_events",
+    "list_recent_activity",
+    "list_projects",
+    "get_project",
+    "create_project",
+    "update_project",
+    "delete_project",
+    "list_teams",
+    "create_team",
+    "update_team",
+    "delete_team",
+    "list_labels",
+    "create_label",
+    "update_label",
+    "delete_label",
+    "list_cycles",
+    "create_cycle",
+    "update_cycle",
+    "delete_cycle",
+    "triage_queue"
+   ],
+   "missing_vs_hosted": [
+    "attach_file",
+    "delete_attachment",
+    "list_attachments"
+   ]
+  },
+  "radial_cli": {
+   "label": "MEASURED (cli/src/index.ts HELP + dispatch, help output cross-checked)",
+   "version": "1.3.0",
+   "top_level_count": 32,
+   "top_level": [
+    "auth",
+    "whoami",
+    "workspace",
+    "keys",
+    "create",
+    "update",
+    "list",
+    "show",
+    "close",
+    "delete",
+    "move",
+    "branch",
+    "comment",
+    "attach",
+    "attachments",
+    "link",
+    "unlink",
+    "inbox",
+    "activity",
+    "recent",
+    "triage",
+    "search",
+    "project",
+    "team",
+    "label",
+    "cycle",
+    "import",
+    "export",
+    "skills",
+    "build",
+    "mcp",
+    "logout"
+   ],
+   "leaf_count": 76,
+   "leaves": [
+    "auth",
+    "whoami",
+    "create",
+    "update",
+    "list",
+    "show",
+    "close",
+    "delete",
+    "move",
+    "branch",
+    "attach",
+    "link",
+    "unlink",
+    "inbox",
+    "activity",
+    "recent",
+    "triage",
+    "search",
+    "import",
+    "export",
+    "mcp",
+    "logout",
+    "workspace show",
+    "workspace list",
+    "workspace use",
+    "workspace current",
+    "workspace available",
+    "keys list",
+    "keys create",
+    "keys revoke",
+    "comment <add>",
+    "comment list",
+    "comment delete",
+    "attachments <list>",
+    "attachments delete",
+    "project list",
+    "project show",
+    "project create",
+    "project update",
+    "project archive",
+    "project unarchive",
+    "project delete",
+    "team list",
+    "team create",
+    "team update",
+    "team archive",
+    "team unarchive",
+    "team delete",
+    "label list",
+    "label create",
+    "label update",
+    "label delete",
+    "cycle list",
+    "cycle create",
+    "cycle update",
+    "cycle delete",
+    "skills install",
+    "skills update",
+    "skills list",
+    "skills remove",
+    "skills extend",
+    "build start",
+    "build bind",
+    "build drafts",
+    "build pipeline",
+    "build stage",
+    "build child",
+    "build gate",
+    "build report",
+    "build capture",
+    "build finish",
+    "build sync",
+    "build show",
+    "build search",
+    "build export",
+    "build hook"
+   ],
+   "aliases": [
+    "login",
+    "edit",
+    "ws",
+    "help",
+    "version"
+   ]
+  },
+  "radial_mcp_live": {
+   "label": "MEASURED (live tools/list, 2026-11-02, R-LIVE-MCP-TOOLS)",
+   "count": 45,
+   "tools_list_bytes": 21020,
+   "tools": [
+    "add_relation",
+    "attach_file",
+    "bulk_update_issues",
+    "claim_issue",
+    "close_issue",
+    "comment",
+    "create_cycle",
+    "create_issue",
+    "create_label",
+    "create_project",
+    "create_team",
+    "delete_attachment",
+    "delete_comment",
+    "delete_cycle",
+    "delete_issue",
+    "delete_label",
+    "delete_project",
+    "delete_team",
+    "get_build",
+    "get_build_rollup",
+    "get_issue",
+    "get_issue_activity",
+    "get_project",
+    "get_workspace",
+    "list_attachments",
+    "list_comments",
+    "list_cycles",
+    "list_issues",
+    "list_labels",
+    "list_notifications",
+    "list_projects",
+    "list_recent_activity",
+    "list_relations",
+    "list_teams",
+    "mark_notification_read",
+    "move_issue",
+    "remove_relation",
+    "search_build_events",
+    "search_issues",
+    "triage_queue",
+    "update_cycle",
+    "update_issue",
+    "update_label",
+    "update_project",
+    "update_team"
+   ]
+  },
+  "linear_mcp": {
+   "label": "MEASURED (live tools/list, 2026-11-02, L-LIVE-MCP-TOOLS). No official page lists tool names; capability cells below still cite docs",
+   "count": 60,
+   "tools_list_bytes": 101447,
+   "tools": [
+    "create_attachment",
+    "create_attachment_from_upload",
+    "create_issue_label",
+    "delete_attachment",
+    "delete_comment",
+    "delete_status_update",
+    "extract_images",
+    "get_agent_skill",
+    "get_attachment",
+    "get_document",
+    "get_issue",
+    "get_issue_status",
+    "get_milestone",
+    "get_notifications",
+    "get_project",
+    "get_release",
+    "get_release_note",
+    "get_status_updates",
+    "get_team",
+    "get_template",
+    "get_triage_responsibility",
+    "get_user",
+    "get_workspace",
+    "list_agent_skills",
+    "list_comments",
+    "list_custom_views",
+    "list_cycles",
+    "list_documents",
+    "list_issue_labels",
+    "list_issue_statuses",
+    "list_issues",
+    "list_milestones",
+    "list_project_labels",
+    "list_projects",
+    "list_release_notes",
+    "list_release_pipelines",
+    "list_releases",
+    "list_teams",
+    "list_templates",
+    "list_users",
+    "mark_notification",
+    "prepare_attachment_upload",
+    "prepare_file_upload",
+    "restore_issue_label",
+    "restore_project_label",
+    "retire_issue_label",
+    "retire_project_label",
+    "save_comment",
+    "save_document",
+    "save_issue",
+    "save_issue_label",
+    "save_milestone",
+    "save_project",
+    "save_project_label",
+    "save_release",
+    "save_release_note",
+    "save_status_update",
+    "search_documentation",
+    "share_issue",
+    "unshare_issue"
+   ],
+   "endpoint": "https://mcp.linear.app/mcp (+ /mcp/readonly)"
+  },
+  "linear_cli": {
+   "label": "DOCUMENTED: no official general-purpose CLI as of 2026-11-02",
+   "count": 0,
+   "official_narrow": [
+    "linear-release (sync, complete, update)",
+    "CLI Importer (packages/import)"
+   ],
+   "community": [
+    {
+     "repo": "schpet/linear-cli",
+     "stars": 1034,
+     "last_push": "2026-10-23"
+    },
+    {
+     "repo": "joa23/linear-cli",
+     "stars": 146,
+     "last_push": "2026-09-13"
+    },
+    {
+     "repo": "nesszer/linear-cli",
+     "stars": 138,
+     "last_push": "2026-09-13"
+    },
+    {
+     "repo": "evangodon/linear-cli",
+     "stars": 91,
+     "last_push": "2025-10-15"
+    },
+    {
+     "repo": "mixpeek/linear-cli",
+     "stars": 16,
+     "last_push": "2025-05-08"
+    },
+    {
+     "repo": "choam2426/Linear-CLI",
+     "stars": 9,
+     "last_push": "2026-04-03"
+    },
+    {
+     "repo": "aaronkwhite/linear-cli",
+     "stars": 7,
+     "last_push": "2026-09-06"
+    }
+   ]
+  },
+  "jira_mcp": {
+   "label": "observed list from a connected MCP client; DOCUMENTED primary list from supported-tools page",
+   "observed_count": 26,
+   "observed": [
+    "addGraphContext",
+    "addOrEditJiraIssueComment",
+    "atlassianUserInfo",
+    "createConfluenceContent",
+    "createJiraIssue",
+    "discover",
+    "editJiraIssue",
+    "executeDestructive",
+    "executeRead",
+    "executeWrite",
+    "getAccessibleAtlassianResources",
+    "getCollaborators (beta)",
+    "getConfluenceContent",
+    "getGraphContext",
+    "getGraphObject",
+    "getJiraIssue",
+    "getLoomObjectsContent",
+    "getPeopleInfo (beta)",
+    "getWorkActivity (beta)",
+    "getWorkPortfolio (beta)",
+    "listJiraIssueComments",
+    "search",
+    "searchConfluence",
+    "searchJiraIssuesUsingJql",
+    "transitionJiraIssue",
+    "updateConfluenceContent"
+   ],
+   "documented_primary_count": 22,
+   "documented_primary": [
+    "addOrEditJiraIssueComment",
+    "addTeamworkGraphContext",
+    "atlassianUserInfo",
+    "createConfluenceContent",
+    "createJiraIssue",
+    "discover",
+    "editJiraIssue",
+    "executeRead",
+    "executeWrite",
+    "executeDestructive",
+    "getAccessibleAtlassianResources",
+    "getConfluenceContent",
+    "getJiraIssue",
+    "getLoomObjectsContent",
+    "getTeamworkGraphContext",
+    "getTeamworkGraphObject",
+    "listJiraIssueComments",
+    "search (beta)",
+    "searchConfluence",
+    "searchJiraIssuesUsingJql",
+    "transitionJiraIssue",
+    "updateConfluenceContent"
+   ],
+   "documented_catalog_total": 248,
+   "documented_catalog_jira": 52,
+   "notes": [
+    "3 observed names differ from docs: addGraphContext/getGraphContext/getGraphObject vs addTeamworkGraph*",
+    "4 observed beta tools not in docs: getCollaborators, getPeopleInfo, getWorkActivity, getWorkPortfolio",
+    "'~330 operations' behind discover is UNVERIFIED; docs count 248 tools total",
+    "all Jira tools need cloudId (from getAccessibleAtlassianResources)"
+   ]
+  },
+  "jira_cli": {
+   "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/",
+   "count": 46,
+   "commands": [
+    "admin auth",
+    "admin user activate",
+    "admin user cancel-delete",
+    "admin user deactivate",
+    "admin user delete",
+    "feedback <feedback>",
+    "rovodev auth",
+    "jira auth login",
+    "jira board list-sprints",
+    "jira board search",
+    "jira dashboard search",
+    "jira field cancel-delete",
+    "jira field create",
+    "jira field delete",
+    "jira filter add-favourite",
+    "jira filter change-owner",
+    "jira filter list",
+    "jira filter search",
+    "jira project archive",
+    "jira project create",
+    "jira project delete",
+    "jira project list",
+    "jira project restore",
+    "jira project update",
+    "jira project view",
+    "jira sprint list-workitems",
+    "jira workitem archive",
+    "jira workitem assign",
+    "jira workitem attachment delete",
+    "jira workitem attachment list",
+    "jira workitem clone",
+    "jira workitem comment create",
+    "jira workitem comment delete",
+    "jira workitem comment list",
+    "jira workitem comment update",
+    "jira workitem comment visibility",
+    "jira workitem create",
+    "jira workitem create-bulk",
+    "jira workitem delete",
+    "jira workitem edit",
+    "jira workitem link",
+    "jira workitem search",
+    "jira workitem transition",
+    "jira workitem unarchive",
+    "jira workitem view",
+    "jira workitem watcher remove"
+   ]
+  }
+ },
+ "rows": [
+  {
+   "id": "R01",
+   "capability": "Create issue",
+   "radial_mcp": {
+    "value": "yes",
+    "how": "create_issue",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "yes",
+    "how": "create",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "yes",
+    "how": "docs: tools for 'finding, creating, and updating objects ... like issues, projects, and comments'",
+    "label": "DOCUMENTED linear.app/docs/mcp"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "yes",
+    "how": "createJiraIssue (primary)",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/supported-tools/"
+   },
+   "jira_cli": {
+    "value": "yes",
+    "how": "jira workitem create",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  },
+  {
+   "id": "R02",
+   "capability": "Update issue",
+   "radial_mcp": {
+    "value": "yes",
+    "how": "update_issue",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "yes",
+    "how": "update / edit",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "yes",
+    "how": "same docs sentence",
+    "label": "DOCUMENTED linear.app/docs/mcp"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "yes",
+    "how": "editJiraIssue (primary)",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/supported-tools/"
+   },
+   "jira_cli": {
+    "value": "yes",
+    "how": "jira workitem edit",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  },
+  {
+   "id": "R03",
+   "capability": "Search issues",
+   "radial_mcp": {
+    "value": "yes",
+    "how": "search_issues, list_issues",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "yes",
+    "how": "search, list",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "yes",
+    "how": "'finding' objects (tool names unpublished)",
+    "label": "DOCUMENTED linear.app/docs/mcp"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "yes",
+    "how": "searchJiraIssuesUsingJql (primary); search costs up to 10 Rovo credits",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/supported-tools/"
+   },
+   "jira_cli": {
+    "value": "yes",
+    "how": "jira workitem search --jql --json",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  },
+  {
+   "id": "R04",
+   "capability": "Comments",
+   "radial_mcp": {
+    "value": "yes",
+    "how": "comment, list_comments, delete_comment (no edit: G-13)",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "yes",
+    "how": "comment, comment list, comment delete, --reply-to (no edit)",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "yes",
+    "how": "docs name comments",
+    "label": "DOCUMENTED linear.app/docs/mcp"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "yes",
+    "how": "addOrEditJiraIssueComment, listJiraIssueComments (primary since 2026-10-28)",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/supported-tools/"
+   },
+   "jira_cli": {
+    "value": "yes",
+    "how": "comment create/update/delete/list/visibility",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  },
+  {
+   "id": "R05",
+   "capability": "Status transitions",
+   "radial_mcp": {
+    "value": "yes",
+    "how": "update_issue status by name, close_issue; names from get_workspace",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "yes",
+    "how": "update -s, close -m",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "unknown",
+    "how": "not stated in docs",
+    "label": "DOCUMENTED linear.app/docs/mcp"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "partial",
+    "how": "transitionJiraIssue needs a transition id from listJiraIssueTransitions (deferred: discover + executeRead)",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/supported-tools/"
+   },
+   "jira_cli": {
+    "value": "yes",
+    "how": "jira workitem transition -s, --jql bulk",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  },
+  {
+   "id": "R06",
+   "capability": "Labels",
+   "radial_mcp": {
+    "value": "yes",
+    "how": "list/create/update/delete_label; labels on create/update",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "yes",
+    "how": "label sub; -l, --add-label, --remove-label",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "unknown",
+    "how": "not stated",
+    "label": "DOCUMENTED linear.app/docs/mcp"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "partial",
+    "how": "labels field via editJiraIssue; no label tool in primary list",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/supported-tools/"
+   },
+   "jira_cli": {
+    "value": "yes",
+    "how": "create -l, edit -l / --remove-labels",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  },
+  {
+   "id": "R07",
+   "capability": "Projects / cycles",
+   "radial_mcp": {
+    "value": "yes",
+    "how": "5 project tools, 4 cycle tools",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "yes",
+    "how": "project 7 subs, cycle 4 subs",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "partial",
+    "how": "projects named in docs; cycles not stated",
+    "label": "DOCUMENTED linear.app/docs/mcp"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "partial",
+    "how": "projects via deferred tools; no sprint tool in primary list",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/supported-tools/"
+   },
+   "jira_cli": {
+    "value": "partial",
+    "how": "jira project 7 subs; sprint list-workitems and board list-sprints only (read)",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  },
+  {
+   "id": "R08",
+   "capability": "Attachments",
+   "radial_mcp": {
+    "value": "yes",
+    "how": "attach_file (3 MB, one file), list_attachments, delete_attachment",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "yes",
+    "how": "attach, attachments, attachments delete",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "unknown",
+    "how": "not stated; API attachments are links to external resources",
+    "label": "DOCUMENTED linear.app/developers/attachments"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "partial",
+    "how": "uploadAttachmentToJiraIssue is deferred (discover + executeWrite)",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/supported-tools/"
+   },
+   "jira_cli": {
+    "value": "partial",
+    "how": "attachment list/delete only; no upload documented",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  },
+  {
+   "id": "R09",
+   "capability": "Prototype preview URL",
+   "radial_mcp": {
+    "value": "yes",
+    "how": "attach_file returns a Preview URL served sandboxed at /p/...",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "yes",
+    "how": "attach prints the Preview URL",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "no",
+    "how": "no preview feature documented",
+    "label": "DOCUMENTED linear.app/docs/mcp"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "no",
+    "how": "no preview tool (none observed; none in docs)",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/supported-tools/"
+   },
+   "jira_cli": {
+    "value": "no",
+    "how": "none documented",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  },
+  {
+   "id": "R10",
+   "capability": "Session logs",
+   "radial_mcp": {
+    "value": "partial",
+    "how": "read-only: get_build, search_build_events (write is CLI-only by design)",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "yes",
+    "how": "build capture / sync / hook / search / show",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "no",
+    "how": "no session-log tool documented",
+    "label": "DOCUMENTED linear.app/docs/mcp"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "no",
+    "how": "no session-log tool",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/supported-tools/"
+   },
+   "jira_cli": {
+    "value": "no",
+    "how": "none",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  },
+  {
+   "id": "R11",
+   "capability": "Claim / assign to agent",
+   "radial_mcp": {
+    "value": "partial",
+    "how": "update_issue assignee 'me'; non-atomic, last write wins (G-10)",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "partial",
+    "how": "update -a me, triage [a]; non-atomic",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "partial",
+    "how": "agents assignable as delegate (app:assignable); MCP tool for it not stated",
+    "label": "DOCUMENTED linear.app/developers/agents"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "partial",
+    "how": "assignee via editJiraIssue; atomicity not documented",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/supported-tools/"
+   },
+   "jira_cli": {
+    "value": "partial",
+    "how": "jira workitem assign",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  },
+  {
+   "id": "R12",
+   "capability": "Done-proof / gates",
+   "radial_mcp": {
+    "value": "partial",
+    "how": "read gates with provenance: get_build_rollup, get_build",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "yes",
+    "how": "build gate --exec (observed), build finish, close -m",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "no",
+    "how": "none documented",
+    "label": "DOCUMENTED linear.app/docs/mcp"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "no",
+    "how": "comment only",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/supported-tools/"
+   },
+   "jira_cli": {
+    "value": "no",
+    "how": "comment only",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  },
+  {
+   "id": "R13",
+   "capability": "Bulk ops",
+   "radial_mcp": {
+    "value": "yes",
+    "how": "bulk_update_issues",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "no",
+    "how": "no bulk command (G-02)",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "unknown",
+    "how": "not stated",
+    "label": "DOCUMENTED linear.app/docs/mcp"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "unknown",
+    "how": "no bulk tool in primary list; deferred catalog not checked per tool",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/supported-tools/"
+   },
+   "jira_cli": {
+    "value": "yes",
+    "how": "edit/transition --jql, create-bulk",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  },
+  {
+   "id": "R14",
+   "capability": "Webhooks",
+   "radial_mcp": {
+    "value": "no",
+    "how": "settings UI only (G-12)",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "no",
+    "how": "settings UI only",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "unknown",
+    "how": "webhooks exist in API (admin); MCP tool not stated",
+    "label": "DOCUMENTED linear.app/developers/webhooks"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "unknown",
+    "how": "not in primary list",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/supported-tools/"
+   },
+   "jira_cli": {
+    "value": "no",
+    "how": "none documented",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  },
+  {
+   "id": "R15",
+   "capability": "Relations",
+   "radial_mcp": {
+    "value": "yes",
+    "how": "add_relation, remove_relation, list_relations",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "yes",
+    "how": "link, unlink, show",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "unknown",
+    "how": "not stated",
+    "label": "DOCUMENTED linear.app/docs/mcp"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "unknown",
+    "how": "not in primary list",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/supported-tools/"
+   },
+   "jira_cli": {
+    "value": "yes",
+    "how": "jira workitem link",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  },
+  {
+   "id": "R16",
+   "capability": "Notifications / inbox",
+   "radial_mcp": {
+    "value": "yes",
+    "how": "list_notifications, mark_notification_read",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "partial",
+    "how": "inbox lists; no mark-read (G-03)",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "unknown",
+    "how": "not stated",
+    "label": "DOCUMENTED linear.app/docs/mcp"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "no",
+    "how": "none in primary list",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/supported-tools/"
+   },
+   "jira_cli": {
+    "value": "no",
+    "how": "watchers only",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  },
+  {
+   "id": "R17",
+   "capability": "Import / export",
+   "radial_mcp": {
+    "value": "no",
+    "how": "no MCP tool (G-04)",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "yes",
+    "how": "import --from linear|jira, export --format json|csv",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "unknown",
+    "how": "not stated (UI CSV export and importers exist, admin only)",
+    "label": "DOCUMENTED linear.app/docs/exporting-data"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "no",
+    "how": "none in primary list",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/supported-tools/"
+   },
+   "jira_cli": {
+    "value": "partial",
+    "how": "search --csv export; no import",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  },
+  {
+   "id": "R18",
+   "capability": "Auth method",
+   "radial_mcp": {
+    "value": "yes",
+    "how": "OAuth 2.1 (DCR, PKCE) or Bearer rk_ API key",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "yes",
+    "how": "device flow OAuth or RADIAL_KEY",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "yes",
+    "how": "OAuth 2.1 with DCR, or OAuth token / API key as Bearer",
+    "label": "DOCUMENTED linear.app/docs/mcp"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "partial",
+    "how": "OAuth 2.1; API token only if an org admin enables it",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/getting-started/"
+   },
+   "jira_cli": {
+    "value": "yes",
+    "how": "auth login --web or --token from stdin",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  },
+  {
+   "id": "R19",
+   "capability": "Headless / CI usable",
+   "radial_mcp": {
+    "value": "yes",
+    "how": "Bearer rk_ key, no browser",
+    "label": "SOURCE 9126321"
+   },
+   "radial_cli": {
+    "value": "yes",
+    "how": "RADIAL_KEY + --json on every command",
+    "label": "SOURCE 9126321"
+   },
+   "linear_mcp": {
+    "value": "yes",
+    "how": "API key in Bearer header",
+    "label": "DOCUMENTED linear.app/docs/mcp"
+   },
+   "linear_cli": {
+    "value": "none-official",
+    "how": "Linear ships no official general-purpose CLI (only linear-release and the CLI Importer)",
+    "label": "DOCUMENTED github.com/linear, linear.app/changelog"
+   },
+   "jira_mcp": {
+    "value": "partial",
+    "how": "needs admin-enabled API token",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/rovo-mcp/guides/supported-tools/"
+   },
+   "jira_cli": {
+    "value": "yes",
+    "how": "token on stdin, --json",
+    "label": "DOCUMENTED developer.atlassian.com/cloud/acli/reference/commands/"
+   }
+  }
+ ],
+ "counts": {
+  "radial_mcp": {
+   "yes": 14,
+   "partial": 3,
+   "no": 2,
+   "unknown": 0,
+   "none-official": 0,
+   "score": 15.5
+  },
+  "radial_cli": {
+   "yes": 15,
+   "partial": 2,
+   "no": 2,
+   "unknown": 0,
+   "none-official": 0,
+   "score": 16.0
+  },
+  "linear_mcp": {
+   "yes": 6,
+   "partial": 2,
+   "no": 3,
+   "unknown": 8,
+   "none-official": 0,
+   "score": 7.0
+  },
+  "linear_cli": {
+   "yes": 0,
+   "partial": 0,
+   "no": 0,
+   "unknown": 0,
+   "none-official": 19,
+   "score": 0.0
+  },
+  "jira_mcp": {
+   "yes": 4,
+   "partial": 7,
+   "no": 5,
+   "unknown": 3,
+   "none-official": 0,
+   "score": 7.5
+  },
+  "jira_cli": {
+   "yes": 10,
+   "partial": 4,
+   "no": 5,
+   "unknown": 0,
+   "none-official": 0,
+   "score": 12.0
+  }
+ }
+}

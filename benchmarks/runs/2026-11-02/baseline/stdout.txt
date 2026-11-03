@@ -1,0 +1,128 @@
+{
+ "meta": {
+  "git": "git version 2.47.3",
+  "python": "Python 3.13.5",
+  "n": 10,
+  "started": "2026-11-02T13:34:24-0800"
+ },
+ "tasks": {
+  "T1": {
+   "n": 10,
+   "median_ms": 32.96,
+   "p10_ms": 32.37,
+   "p90_ms": 34.46,
+   "commands": 5,
+   "context_bytes_median": 3.0,
+   "errors_total": 0,
+   "ok_all": true
+  },
+  "T2": {
+   "n": 10,
+   "median_ms": 35.04,
+   "p10_ms": 34.27,
+   "p90_ms": 67.52,
+   "commands": 5,
+   "context_bytes_median": 61.0,
+   "errors_total": 0,
+   "ok_all": true
+  },
+  "T3": {
+   "n": 10,
+   "median_ms": 24.77,
+   "p10_ms": 24.54,
+   "p90_ms": 25.12,
+   "commands": 4,
+   "context_bytes_median": 0.0,
+   "errors_total": 0,
+   "ok_all": true
+  },
+  "T4": {
+   "n": 10,
+   "median_ms": 35.75,
+   "p10_ms": 34.3,
+   "p90_ms": 37.19,
+   "commands": 5,
+   "context_bytes_median": 0.0,
+   "errors_total": 0,
+   "ok_all": true
+  },
+  "T5": {
+   "n": 10,
+   "median_ms": 4.09,
+   "p10_ms": 3.92,
+   "p90_ms": 4.37,
+   "commands": 2,
+   "context_bytes_median": 148.0,
+   "errors_total": 0,
+   "ok_all": true
+  },
+  "T7": {
+   "n": 10,
+   "median_ms": 49.25,
+   "p10_ms": 48.48,
+   "p90_ms": 49.96,
+   "commands": 6,
+   "context_bytes_median": 188.0,
+   "errors_total": 0,
+   "ok_all": true
+  },
+  "T8": {
+   "n": 10,
+   "median_ms": 21.73,
+   "p10_ms": 20.84,
+   "p90_ms": 22.54,
+   "commands": 6,
+   "context_bytes_median": 7217.0,
+   "errors_total": 0,
+   "ok_all": true
+  }
+ },
+ "claim_race_shared_checkout": {
+  "n": 20,
+  "same_task": 20,
+  "lost_update": 20
+ },
+ "claim_race_git": {
+  "n": 20,
+  "same_task": 20,
+  "push_rejected": 20,
+  "rebase_conflict": 20
+ },
+ "merge_conflicts": {
+  "both_append_new_task": {
+   "n": 10,
+   "conflicts": 10
+  },
+  "close_far_apart_tasks": {
+   "n": 10,
+   "conflicts": 0
+  },
+  "close_adjacent_tasks": {
+   "n": 10,
+   "conflicts": 10
+  }
+ },
+ "context_scaling": [
+  {
+   "decisions": 50,
+   "tasks": 12,
+   "DECISIONS_md_bytes": 6535,
+   "TODO_md_bytes": 790,
+   "full_read_bytes_if_agent_cats_both": 7325
+  },
+  {
+   "decisions": 200,
+   "tasks": 50,
+   "DECISIONS_md_bytes": 25808,
+   "TODO_md_bytes": 3108,
+   "full_read_bytes_if_agent_cats_both": 28916
+  },
+  {
+   "decisions": 1000,
+   "tasks": 250,
+   "DECISIONS_md_bytes": 128992,
+   "TODO_md_bytes": 15459,
+   "full_read_bytes_if_agent_cats_both": 144451
+  }
+ ]
+}

@@ -1,0 +1,650 @@
+{
+ "summary": {
+  "T1": {
+   "n": 10,
+   "median_ms": 32.96,
+   "p10_ms": 32.37,
+   "p90_ms": 34.46,
+   "commands": 5,
+   "context_bytes_median": 3.0,
+   "errors_total": 0,
+   "ok_all": true
+  },
+  "T2": {
+   "n": 10,
+   "median_ms": 35.04,
+   "p10_ms": 34.27,
+   "p90_ms": 67.52,
+   "commands": 5,
+   "context_bytes_median": 61.0,
+   "errors_total": 0,
+   "ok_all": true
+  },
+  "T3": {
+   "n": 10,
+   "median_ms": 24.77,
+   "p10_ms": 24.54,
+   "p90_ms": 25.12,
+   "commands": 4,
+   "context_bytes_median": 0.0,
+   "errors_total": 0,
+   "ok_all": true
+  },
+  "T4": {
+   "n": 10,
+   "median_ms": 35.75,
+   "p10_ms": 34.3,
+   "p90_ms": 37.19,
+   "commands": 5,
+   "context_bytes_median": 0.0,
+   "errors_total": 0,
+   "ok_all": true
+  },
+  "T5": {
+   "n": 10,
+   "median_ms": 4.09,
+   "p10_ms": 3.92,
+   "p90_ms": 4.37,
+   "commands": 2,
+   "context_bytes_median": 148.0,
+   "errors_total": 0,
+   "ok_all": true
+  },
+  "T7": {
+   "n": 10,
+   "median_ms": 49.25,
+   "p10_ms": 48.48,
+   "p90_ms": 49.96,
+   "commands": 6,
+   "context_bytes_median": 188.0,
+   "errors_total": 0,
+   "ok_all": true
+  },
+  "T8": {
+   "n": 10,
+   "median_ms": 21.73,
+   "p10_ms": 20.84,
+   "p90_ms": 22.54,
+   "commands": 6,
+   "context_bytes_median": 7217.0,
+   "errors_total": 0,
+   "ok_all": true
+  }
+ },
+ "trials": {
+  "T1": [
+   {
+    "trial": 0,
+    "ms": 34.47,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 3,
+    "errors": 0
+   },
+   {
+    "trial": 1,
+    "ms": 32.29,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 3,
+    "errors": 0
+   },
+   {
+    "trial": 2,
+    "ms": 33.5,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 3,
+    "errors": 0
+   },
+   {
+    "trial": 3,
+    "ms": 32.43,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 3,
+    "errors": 0
+   },
+   {
+    "trial": 4,
+    "ms": 32.4,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 3,
+    "errors": 0
+   },
+   {
+    "trial": 5,
+    "ms": 32.51,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 3,
+    "errors": 0
+   },
+   {
+    "trial": 6,
+    "ms": 34.46,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 3,
+    "errors": 0
+   },
+   {
+    "trial": 7,
+    "ms": 34.0,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 3,
+    "errors": 0
+   },
+   {
+    "trial": 8,
+    "ms": 33.41,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 3,
+    "errors": 0
+   },
+   {
+    "trial": 9,
+    "ms": 32.38,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 3,
+    "errors": 0
+   }
+  ],
+  "T2": [
+   {
+    "trial": 0,
+    "ms": 34.25,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 61,
+    "errors": 0
+   },
+   {
+    "trial": 1,
+    "ms": 34.35,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 61,
+    "errors": 0
+   },
+   {
+    "trial": 2,
+    "ms": 346.45,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 61,
+    "errors": 0
+   },
+   {
+    "trial": 3,
+    "ms": 34.74,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 61,
+    "errors": 0
+   },
+   {
+    "trial": 4,
+    "ms": 35.23,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 61,
+    "errors": 0
+   },
+   {
+    "trial": 5,
+    "ms": 34.85,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 61,
+    "errors": 0
+   },
+   {
+    "trial": 6,
+    "ms": 35.46,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 61,
+    "errors": 0
+   },
+   {
+    "trial": 7,
+    "ms": 36.34,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 61,
+    "errors": 0
+   },
+   {
+    "trial": 8,
+    "ms": 34.27,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 61,
+    "errors": 0
+   },
+   {
+    "trial": 9,
+    "ms": 36.53,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 61,
+    "errors": 0
+   }
+  ],
+  "T3": [
+   {
+    "trial": 0,
+    "ms": 24.73,
+    "ok": true,
+    "commands": 4,
+    "bytes_read": 0,
+    "errors": 0
+   },
+   {
+    "trial": 1,
+    "ms": 24.67,
+    "ok": true,
+    "commands": 4,
+    "bytes_read": 0,
+    "errors": 0
+   },
+   {
+    "trial": 2,
+    "ms": 25.09,
+    "ok": true,
+    "commands": 4,
+    "bytes_read": 0,
+    "errors": 0
+   },
+   {
+    "trial": 3,
+    "ms": 24.24,
+    "ok": true,
+    "commands": 4,
+    "bytes_read": 0,
+    "errors": 0
+   },
+   {
+    "trial": 4,
+    "ms": 25.42,
+    "ok": true,
+    "commands": 4,
+    "bytes_read": 0,
+    "errors": 0
+   },
+   {
+    "trial": 5,
+    "ms": 24.57,
+    "ok": true,
+    "commands": 4,
+    "bytes_read": 0,
+    "errors": 0
+   },
+   {
+    "trial": 6,
+    "ms": 24.57,
+    "ok": true,
+    "commands": 4,
+    "bytes_read": 0,
+    "errors": 0
+   },
+   {
+    "trial": 7,
+    "ms": 24.9,
+    "ok": true,
+    "commands": 4,
+    "bytes_read": 0,
+    "errors": 0
+   },
+   {
+    "trial": 8,
+    "ms": 24.92,
+    "ok": true,
+    "commands": 4,
+    "bytes_read": 0,
+    "errors": 0
+   },
+   {
+    "trial": 9,
+    "ms": 24.82,
+    "ok": true,
+    "commands": 4,
+    "bytes_read": 0,
+    "errors": 0
+   }
+  ],
+  "T4": [
+   {
+    "trial": 0,
+    "ms": 34.26,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 0,
+    "errors": 0
+   },
+   {
+    "trial": 1,
+    "ms": 36.66,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 0,
+    "errors": 0
+   },
+   {
+    "trial": 2,
+    "ms": 34.31,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 0,
+    "errors": 0
+   },
+   {
+    "trial": 3,
+    "ms": 35.15,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 0,
+    "errors": 0
+   },
+   {
+    "trial": 4,
+    "ms": 37.09,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 0,
+    "errors": 0
+   },
+   {
+    "trial": 5,
+    "ms": 35.3,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 0,
+    "errors": 0
+   },
+   {
+    "trial": 6,
+    "ms": 36.52,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 0,
+    "errors": 0
+   },
+   {
+    "trial": 7,
+    "ms": 38.13,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 0,
+    "errors": 0
+   },
+   {
+    "trial": 8,
+    "ms": 35.73,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 0,
+    "errors": 0
+   },
+   {
+    "trial": 9,
+    "ms": 35.77,
+    "ok": true,
+    "commands": 5,
+    "bytes_read": 0,
+    "errors": 0
+   }
+  ],
+  "T5": [
+   {
+    "trial": 0,
+    "ms": 4.51,
+    "ok": true,
+    "commands": 2,
+    "bytes_read": 148,
+    "errors": 0
+   },
+   {
+    "trial": 1,
+    "ms": 4.35,
+    "ok": true,
+    "commands": 2,
+    "bytes_read": 148,
+    "errors": 0
+   },
+   {
+    "trial": 2,
+    "ms": 4.05,
+    "ok": true,
+    "commands": 2,
+    "bytes_read": 148,
+    "errors": 0
+   },
+   {
+    "trial": 3,
+    "ms": 3.79,
+    "ok": true,
+    "commands": 2,
+    "bytes_read": 148,
+    "errors": 0
+   },
+   {
+    "trial": 4,
+    "ms": 4.33,
+    "ok": true,
+    "commands": 2,
+    "bytes_read": 148,
+    "errors": 0
+   },
+   {
+    "trial": 5,
+    "ms": 4.11,
+    "ok": true,
+    "commands": 2,
+    "bytes_read": 148,
+    "errors": 0
+   },
+   {
+    "trial": 6,
+    "ms": 3.94,
+    "ok": true,
+    "commands": 2,
+    "bytes_read": 148,
+    "errors": 0
+   },
+   {
+    "trial": 7,
+    "ms": 4.3,
+    "ok": true,
+    "commands": 2,
+    "bytes_read": 148,
+    "errors": 0
+   },
+   {
+    "trial": 8,
+    "ms": 3.97,
+    "ok": true,
+    "commands": 2,
+    "bytes_read": 148,
+    "errors": 0
+   },
+   {
+    "trial": 9,
+    "ms": 4.07,
+    "ok": true,
+    "commands": 2,
+    "bytes_read": 148,
+    "errors": 0
+   }
+  ],
+  "T7": [
+   {
+    "trial": 0,
+    "ms": 49.84,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 188,
+    "errors": 0
+   },
+   {
+    "trial": 1,
+    "ms": 46.66,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 188,
+    "errors": 0
+   },
+   {
+    "trial": 2,
+    "ms": 50.65,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 188,
+    "errors": 0
+   },
+   {
+    "trial": 3,
+    "ms": 48.68,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 188,
+    "errors": 0
+   },
+   {
+    "trial": 4,
+    "ms": 49.88,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 188,
+    "errors": 0
+   },
+   {
+    "trial": 5,
+    "ms": 49.14,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 188,
+    "errors": 0
+   },
+   {
+    "trial": 6,
+    "ms": 49.37,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 188,
+    "errors": 0
+   },
+   {
+    "trial": 7,
+    "ms": 49.49,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 188,
+    "errors": 0
+   },
+   {
+    "trial": 8,
+    "ms": 48.78,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 188,
+    "errors": 0
+   },
+   {
+    "trial": 9,
+    "ms": 48.73,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 188,
+    "errors": 0
+   }
+  ],
+  "T8": [
+   {
+    "trial": 0,
+    "ms": 21.46,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 7217,
+    "errors": 0
+   },
+   {
+    "trial": 1,
+    "ms": 20.85,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 7217,
+    "errors": 0
+   },
+   {
+    "trial": 2,
+    "ms": 23.52,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 7217,
+    "errors": 0
+   },
+   {
+    "trial": 3,
+    "ms": 21.03,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 7217,
+    "errors": 0
+   },
+   {
+    "trial": 4,
+    "ms": 21.07,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 7217,
+    "errors": 0
+   },
+   {
+    "trial": 5,
+    "ms": 22.01,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 7217,
+    "errors": 0
+   },
+   {
+    "trial": 6,
+    "ms": 22.13,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 7286,
+    "errors": 0
+   },
+   {
+    "trial": 7,
+    "ms": 22.43,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 7217,
+    "errors": 0
+   },
+   {
+    "trial": 8,
+    "ms": 20.71,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 7217,
+    "errors": 0
+   },
+   {
+    "trial": 9,
+    "ms": 22.3,
+    "ok": true,
+    "commands": 6,
+    "bytes_read": 7217,
+    "errors": 0
+   }
+  ]
+ }
+}

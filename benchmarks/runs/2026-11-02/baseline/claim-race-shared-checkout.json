@@ -1,0 +1,322 @@
+[
+ {
+  "trial": 0,
+  "picked": {
+   "agent-b": "T-011",
+   "agent-a": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]",
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-b"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 1,
+  "picked": {
+   "agent-b": "T-011",
+   "agent-a": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-b) [in-progress]",
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-b) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-a"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 2,
+  "picked": {
+   "agent-b": "T-011",
+   "agent-a": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-b) [in-progress]",
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-b) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-a"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 3,
+  "picked": {
+   "agent-a": "T-011",
+   "agent-b": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-b) [in-progress]",
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-b) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-a"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 4,
+  "picked": {
+   "agent-a": "T-011",
+   "agent-b": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]",
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-b"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 5,
+  "picked": {
+   "agent-a": "T-011",
+   "agent-b": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]",
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-b"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 6,
+  "picked": {
+   "agent-b": "T-011",
+   "agent-a": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-b) [in-progress]",
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-b) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-a"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 7,
+  "picked": {
+   "agent-a": "T-011",
+   "agent-b": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-b) [in-progress]",
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-b) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-a"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 8,
+  "picked": {
+   "agent-b": "T-011",
+   "agent-a": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]",
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-b"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 9,
+  "picked": {
+   "agent-a": "T-011",
+   "agent-b": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]",
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-b"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 10,
+  "picked": {
+   "agent-b": "T-011",
+   "agent-a": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]",
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-b"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 11,
+  "picked": {
+   "agent-a": "T-011",
+   "agent-b": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]",
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-b"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 12,
+  "picked": {
+   "agent-a": "T-011",
+   "agent-b": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-b) [in-progress]",
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-b) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-a"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 13,
+  "picked": {
+   "agent-b": "T-011",
+   "agent-a": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]",
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-b"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 14,
+  "picked": {
+   "agent-b": "T-011",
+   "agent-a": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]",
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-b"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 15,
+  "picked": {
+   "agent-b": "T-011",
+   "agent-a": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]",
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-b"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 16,
+  "picked": {
+   "agent-a": "T-011",
+   "agent-b": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-b) [in-progress]",
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-b) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-a"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 17,
+  "picked": {
+   "agent-a": "T-011",
+   "agent-b": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]",
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-b"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 18,
+  "picked": {
+   "agent-a": "T-011",
+   "agent-b": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]",
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-a) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-b"
+  ],
+  "lost_update": true
+ },
+ {
+  "trial": 19,
+  "picked": {
+   "agent-b": "T-011",
+   "agent-a": "T-011"
+  },
+  "same_task": true,
+  "final_lines": {
+   "agent-b": "- [ ] T-011 Task number 11 for module f (owner: agent-b) [in-progress]",
+   "agent-a": "- [ ] T-011 Task number 11 for module f (owner: agent-b) [in-progress]"
+  },
+  "silent_losers": [
+   "agent-a"
+  ],
+  "lost_update": true
+ }
+]
