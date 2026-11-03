@@ -1,0 +1,10 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.BrainGridAI/radial",
+  "title": "Radial",
+  "description": "Issue tracker MCP for coding agents: list, claim, update and close issues.",
+  "version": "1.3.0",
+  "websiteUrl": "https://radial.build",
+  "repository": { "url": "https://github.com/BrainGridAI/radial", "source": "github" },
+  "remotes": [ { "type": "streamable-http", "url": "https://mcp.radial.build" } ]
+}
