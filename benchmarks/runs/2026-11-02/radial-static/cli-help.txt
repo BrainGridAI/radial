@@ -1,0 +1,57 @@
+radial — script your issue tracker
+
+USAGE
+  radial <command> [args] [--flags]   (every command supports --json)
+
+COMMANDS
+  auth [--workspace <s>]   Sign in with the device flow (or set RADIAL_KEY)
+  whoami                   Show the active workspace, scope, and agent
+  workspace <sub>          show | list | use <slug|id> | current | available   (alias: ws)
+  keys <sub>               list | create <name> [--scope] | revoke <id>   (owner/admin)
+  create <title>           Create an issue   -p priority -l label -a assignee -t team  (-d <text> | --description-file <path>)
+  update <ID>              Edit an issue (alias: edit)  --title  (-d <text> | --description-file <path>)  -p -a -s -l --project --cycle
+                           --add-label <s> / --remove-label <s> change ONE label; -l replaces the set
+  list                     List issues       --assignee --status --label --team --priority --all --cursor
+  show <ID>                Full issue detail with comments + relations
+  close <ID>               Close an issue     -m "message"
+  delete <ID>              Permanently delete an issue
+  move <ID> <team>         Move an issue to another team (re-keys its id)
+  branch <ID>              Print the suggested git branch name for an issue
+  comment <ID> <body>      Add a comment    -m / --stdin / --reply-to <cId> / --attachment <aId>
+  comment list <ID>        List an issue's comments (with ids)   (alias: ls)
+  comment delete <cId>     Soft-delete a comment by id           (alias: rm / del)
+  attach <ID> <file>       Attach an HTML prototype (or file) and print its Preview URL  [--name <s>]
+  attachments <ID>         List an issue's attachments (with ids + Preview URLs)
+  attachments delete <aId> Soft-delete an attachment by id       (alias: rm / del)
+  link <ID> <type> <to>    Relate issues      blocks | blocked-by | related | duplicate-of | duplicated-by
+  unlink <ID> <type> <to>  Remove a relation
+  inbox                    Your notifications              --unread --limit
+  activity <ID>            An issue's activity history
+  recent                   Recent status changes  --since 24h|48h|7d|30d --team --project --category
+  triage                   Step through the triage queue   -t/--team
+  search <query>           Search issues, comments, projects   --type issue|comment|project|all --limit
+  project <sub>            list | show <id> | create <name> | update <id> | archive | unarchive | delete <id>   [-p priority --color #hex --icon X --lead me]
+  team <sub>               list | create <name> --key ENG | update <id|key> | archive | unarchive | delete   (owner/admin)
+  label <sub>              list | create <name> | update <id> | delete <id>   --color -t
+  cycle <sub>              list | create | update <id> | delete <id>   -t --name --start --end
+  import --from linear|jira <file>   Import a Linear/Jira export (--dry-run)
+  export                   Export the workspace   --format json|csv  -o file
+  skills <sub>             install | update | list | remove | extend — the rd-* agent skills
+                           [--agent claude|codex|all] [--project] [--ref <git-ref>] [--dry-run]
+  build <sub>              start | bind | drafts | pipeline | stage | child | gate | report
+                           capture | finish | sync | show | search | export | hook
+                           Record a build on its issue: stages, child windows, gates and the chat
+  mcp                      Run the MCP server over stdio
+  logout [--all]           Forget the active workspace (--all: every workspace)
+
+EXAMPLES
+  radial create "Search flashes empty state" -p high -l bug -a me
+  radial attach RAD-42 prototype.html   (prints a Preview URL for the team)
+  radial list --status open --assignee me --json
+  radial workspace use acme
+  radial auth --workspace acme
+  radial import --from linear export.json --dry-run
+  radial update RAD-42 --description-file plan.md   (-d is inline text, not a file path)
+  radial update RAD-42 --add-label codex             (keeps every other label; -l would replace them)
+  radial skills install                              (rd-* skills for Claude Code and Codex)
+  radial skills extend rd-build --name team-build    (scaffold a wrapper with every hook heading)

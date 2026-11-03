@@ -1,0 +1,16 @@
+{
+  "source_url": "https://linear.app/docs/mcp",
+  "fetched": "2026-11-02",
+  "tools": [],
+  "count": null,
+  "status": "UNVERIFIED: no official Linear source lists MCP tool names. Checked https://linear.app/docs/mcp, https://linear.app/changelog/2025-05-01-mcp, https://linear.app/changelog, https://linear.app/developers/mcp (404), https://mcp.linear.app/ (302 to docs/mcp), https://github.com/linear/cursor-plugin (mcp.json has only the server URL), https://github.com/linear/antigravity-plugin, https://github.com/linear/linear. Tool list left empty on purpose; not filled from memory or third-party listings.",
+  "quote": "has tools available for finding, creating, and updating objects in Linear like issues, projects, and comments",
+  "endpoints": {
+    "read_write": "https://mcp.linear.app/mcp",
+    "read_only": "https://mcp.linear.app/mcp/readonly",
+    "sse_deprecated": "https://mcp.linear.app/sse"
+  },
+  "transport": "Streamable HTTP (primary); SSE deprecated fallback",
+  "auth": "OAuth 2.1 with dynamic client registration; OAuth token or Linear API key as Authorization: Bearer header; Okta enterprise-managed authorization; Claude-issued authentication (beta)",
+  "rate_limits": "none stated on docs page"
+}

@@ -1,0 +1,282 @@
+[
+ {
+  "trial": 0,
+  "same_task": true,
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 1,
+  "same_task": true,
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 2,
+  "same_task": true,
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 3,
+  "same_task": true,
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 4,
+  "same_task": true,
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 5,
+  "same_task": true,
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 6,
+  "same_task": true,
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 7,
+  "same_task": true,
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 8,
+  "same_task": true,
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 9,
+  "same_task": true,
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 10,
+  "same_task": true,
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 11,
+  "same_task": true,
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 12,
+  "same_task": true,
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 13,
+  "same_task": true,
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 14,
+  "same_task": true,
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 15,
+  "same_task": true,
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 16,
+  "same_task": true,
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 17,
+  "same_task": true,
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 18,
+  "same_task": true,
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ },
+ {
+  "trial": 19,
+  "same_task": true,
+  "agent-a": {
+   "tid": "T-011",
+   "push_rejected": false
+  },
+  "agent-b": {
+   "tid": "T-011",
+   "push_rejected": true,
+   "rebase_conflict": true
+  },
+  "extra_commands_for_loser": 2
+ }
+]

@@ -1,0 +1,5 @@
+# Local scratch and private-source snapshots written by reproduce.sh. Never publish these.
+.context/
+runs/*/radial-static/*.snapshot
+runs/*/radial-static/*.snapshot.md
+__pycache__/

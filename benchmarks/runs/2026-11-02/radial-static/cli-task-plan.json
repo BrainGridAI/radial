@@ -1,0 +1,14 @@
+{
+ "label": "SIMULATED: command sequence written from `radial help` (cli-help.txt) at CLI 1.3.0; http_requests counted by reading each command's function in cli-commands.ts.snapshot (one client.request per call unless noted). Not executed against an API.",
+ "tasks": {
+  "T0": {"commands": ["npm i -g radial.build", "radial auth", "radial create \"First agent issue\" --json"], "agent_commands": 3, "auth_steps": 2, "auth_note": "device flow: 1 command + 1 browser consent by the human. Headless alternative: human creates an rk_ key (1 web step), agent sets RADIAL_KEY (1 step).", "http_requests": "device flow polling (n varies) + 1"},
+  "T1": {"commands": ["radial create \"New bug in search\" -p high -l bug --json"], "agent_commands": 1, "http_requests": 1},
+  "T2": {"commands": ["radial list --status Todo --json", "radial update RAD-12 -a me -s \"In Progress\" --json"], "agent_commands": 2, "http_requests": 2, "note": "no unassigned filter in the CLI flags; the agent filters list output itself. Read-then-write, not atomic (GAPS G-10, G-11)."},
+  "T3": {"commands": ["radial build gate --exec -- pnpm test", "radial update RAD-12 -s \"In Review\" --json"], "agent_commands": 2, "http_requests": "1 + build sync batches", "note": "gate --exec records an observed result; assumes a build was started earlier with `radial build start`"},
+  "T4": {"commands": ["radial close RAD-12 -m \"Done: shipped in #123, gates green\" --json"], "agent_commands": 1, "http_requests": 1},
+  "T5": {"commands": ["radial search \"rate limiter token bucket\" --type all --json", "radial show RAD-7 --json"], "agent_commands": 2, "http_requests": 3, "note": "show = GET issue + GET comments"},
+  "T6": {"commands": ["radial attach RAD-12 prototype.html --json"], "agent_commands": 1, "http_requests": 1, "note": "prints the Preview URL; 3 MB single-file cap"},
+  "T7": {"commands": ["radial update RAD-12 -a <agent-b-identity> --json", "radial comment RAD-12 \"Handoff: parser done, next wire CLI flag\"", "radial inbox --unread --json", "radial show RAD-12 --json"], "agent_commands": 4, "http_requests": 5, "note": "first two by agent A, last two by agent B; B cannot mark the notification read from the CLI (GAPS G-03)"},
+  "T8": {"commands": ["radial list --assignee me --json", "radial show RAD-12 --json", "radial build show RAD-12 --json"], "agent_commands": 3, "http_requests": "1 + 2 + build read"}
+ }
+}

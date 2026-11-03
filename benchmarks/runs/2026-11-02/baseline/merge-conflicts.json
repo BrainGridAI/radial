@@ -1,0 +1,170 @@
+{
+ "both_append_new_task": {
+  "n": 10,
+  "conflicts": 10,
+  "trials": [
+   {
+    "trial": 0,
+    "conflict": true,
+    "base_task": 35
+   },
+   {
+    "trial": 1,
+    "conflict": true,
+    "base_task": 32
+   },
+   {
+    "trial": 2,
+    "conflict": true,
+    "base_task": 36
+   },
+   {
+    "trial": 3,
+    "conflict": true,
+    "base_task": 30
+   },
+   {
+    "trial": 4,
+    "conflict": true,
+    "base_task": 31
+   },
+   {
+    "trial": 5,
+    "conflict": true,
+    "base_task": 38
+   },
+   {
+    "trial": 6,
+    "conflict": true,
+    "base_task": 31
+   },
+   {
+    "trial": 7,
+    "conflict": true,
+    "base_task": 35
+   },
+   {
+    "trial": 8,
+    "conflict": true,
+    "base_task": 30
+   },
+   {
+    "trial": 9,
+    "conflict": true,
+    "base_task": 38
+   }
+  ]
+ },
+ "close_far_apart_tasks": {
+  "n": 10,
+  "conflicts": 0,
+  "trials": [
+   {
+    "trial": 0,
+    "conflict": false,
+    "base_task": 33
+   },
+   {
+    "trial": 1,
+    "conflict": false,
+    "base_task": 30
+   },
+   {
+    "trial": 2,
+    "conflict": false,
+    "base_task": 31
+   },
+   {
+    "trial": 3,
+    "conflict": false,
+    "base_task": 36
+   },
+   {
+    "trial": 4,
+    "conflict": false,
+    "base_task": 36
+   },
+   {
+    "trial": 5,
+    "conflict": false,
+    "base_task": 31
+   },
+   {
+    "trial": 6,
+    "conflict": false,
+    "base_task": 33
+   },
+   {
+    "trial": 7,
+    "conflict": false,
+    "base_task": 31
+   },
+   {
+    "trial": 8,
+    "conflict": false,
+    "base_task": 38
+   },
+   {
+    "trial": 9,
+    "conflict": false,
+    "base_task": 36
+   }
+  ]
+ },
+ "close_adjacent_tasks": {
+  "n": 10,
+  "conflicts": 10,
+  "trials": [
+   {
+    "trial": 0,
+    "conflict": true,
+    "base_task": 30
+   },
+   {
+    "trial": 1,
+    "conflict": true,
+    "base_task": 31
+   },
+   {
+    "trial": 2,
+    "conflict": true,
+    "base_task": 33
+   },
+   {
+    "trial": 3,
+    "conflict": true,
+    "base_task": 30
+   },
+   {
+    "trial": 4,
+    "conflict": true,
+    "base_task": 36
+   },
+   {
+    "trial": 5,
+    "conflict": true,
+    "base_task": 30
+   },
+   {
+    "trial": 6,
+    "conflict": true,
+    "base_task": 33
+   },
+   {
+    "trial": 7,
+    "conflict": true,
+    "base_task": 30
+   },
+   {
+    "trial": 8,
+    "conflict": true,
+    "base_task": 38
+   },
+   {
+    "trial": 9,
+    "conflict": true,
+    "base_task": 32
+   }
+  ]
+ }
+}
