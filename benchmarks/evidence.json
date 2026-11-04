@@ -1,5 +1,5 @@
 {
- "as_of": "2026-11-02",
+ "as_of": "2026-11-04",
  "labels": [
   "MEASURED",
   "DOCUMENTED",
@@ -727,7 +727,28 @@
    "json_path": ".names",
    "command": "see R-LIVE-MCP-TOOLS",
    "n": 1,
-   "note": "Radial's atomic claim (POST /v1/issues/{id}/claim, MCP tool claim_issue) is live on production as of 2026-11-02. Its live multi-identity race was NOT run (needs several agent keys). Evidence for atomicity is a 12-way concurrent unit test in the Radial app repo (private)"
+   "note": "Radial's atomic claim (POST /v1/issues/{id}/claim, MCP tool claim_issue) is live on production as of 2026-11-02. The live multi-identity race was run on 2026-11-04 (see R-LIVE-RACE). A 12-way concurrent unit test in the Radial app repo (private) also covers it"
+  },
+  {
+   "id": "R-LIVE-RACE",
+   "label": "MEASURED",
+   "date": "2026-11-04",
+   "value": {
+    "rounds": 10,
+    "workers_per_round": 20,
+    "rounds_with_multiple_claimants": 0,
+    "total_silent_overwrites": 0,
+    "workers_told_claimed": 10,
+    "workers_rejected_409": 190,
+    "errors": 0,
+    "distinct_identities": 20
+   },
+   "unit": "rounds; overwrites; worker outcomes",
+   "file": "runs/2026-11-04/radial-live/claim-race-rest.json",
+   "json_path": ".rounds_with_multiple_claimants, .total_silent_overwrites, .rounds[].results",
+   "command": "RADIAL_KEYS=... RADIAL_TEAM=... python3 scripts/radial_race.py",
+   "n": 10,
+   "note": "20 distinct agent API keys (one per worker) in Radial's own internal workspace on production, temporary team; conditional claim (assignee null or caller, else 409). On production an issue created by an agent is auto-assigned to the key's human owner, so the harness unassigns each issue and reads it back as null before the round. A first run without that step was discarded (all 200 claims rejected). All test issues were deleted and the keys revoked after the run"
   }
  ]
 }

@@ -1,0 +1,434 @@
+{
+ "at": "2026-11-04T15:19:10-0800",
+ "method": "each race issue is PATCHed to assignee \"none\" after create and read back as null before the round (production auto-assigns an agent-created issue to the key's human owner; a 2026-11-04 run without this step got 200 of 200 claims rejected and is discarded); 20 workers per round, barrier, one POST /api/v1/issues/{id}/claim each (conditional update: assignee null or caller, else 409); 20 distinct agent identities, one per worker",
+ "rounds": [
+  {
+   "round": 0,
+   "issue": "BENCH-54",
+   "workers": 20,
+   "believed_claimed": 1,
+   "final_owner": "w6",
+   "silent_overwrites": 0,
+   "results": [
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "claimed",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409"
+   ]
+  },
+  {
+   "round": 1,
+   "issue": "BENCH-55",
+   "workers": 20,
+   "believed_claimed": 1,
+   "final_owner": "w15",
+   "silent_overwrites": 0,
+   "results": [
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "claimed",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409"
+   ]
+  },
+  {
+   "round": 2,
+   "issue": "BENCH-56",
+   "workers": 20,
+   "believed_claimed": 1,
+   "final_owner": "w13",
+   "silent_overwrites": 0,
+   "results": [
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "claimed",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409"
+   ]
+  },
+  {
+   "round": 3,
+   "issue": "BENCH-57",
+   "workers": 20,
+   "believed_claimed": 1,
+   "final_owner": "w4",
+   "silent_overwrites": 0,
+   "results": [
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "claimed",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409"
+   ]
+  },
+  {
+   "round": 4,
+   "issue": "BENCH-58",
+   "workers": 20,
+   "believed_claimed": 1,
+   "final_owner": "w6",
+   "silent_overwrites": 0,
+   "results": [
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "claimed",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409"
+   ]
+  },
+  {
+   "round": 5,
+   "issue": "BENCH-59",
+   "workers": 20,
+   "believed_claimed": 1,
+   "final_owner": "w16",
+   "silent_overwrites": 0,
+   "results": [
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "claimed",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409"
+   ]
+  },
+  {
+   "round": 6,
+   "issue": "BENCH-60",
+   "workers": 20,
+   "believed_claimed": 1,
+   "final_owner": "w1",
+   "silent_overwrites": 0,
+   "results": [
+    "rejected-409",
+    "claimed",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409"
+   ]
+  },
+  {
+   "round": 7,
+   "issue": "BENCH-61",
+   "workers": 20,
+   "believed_claimed": 1,
+   "final_owner": "w14",
+   "silent_overwrites": 0,
+   "results": [
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "claimed",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409"
+   ]
+  },
+  {
+   "round": 8,
+   "issue": "BENCH-62",
+   "workers": 20,
+   "believed_claimed": 1,
+   "final_owner": "w14",
+   "silent_overwrites": 0,
+   "results": [
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "claimed",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409"
+   ]
+  },
+  {
+   "round": 9,
+   "issue": "BENCH-63",
+   "workers": 20,
+   "believed_claimed": 1,
+   "final_owner": "w2",
+   "silent_overwrites": 0,
+   "results": [
+    "rejected-409",
+    "rejected-409",
+    "claimed",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409",
+    "rejected-409"
+   ]
+  }
+ ],
+ "rounds_with_multiple_claimants": 0,
+ "total_silent_overwrites": 0,
+ "mode": "multi-identity",
+ "api": "https://www.radial.build/api/v1",
+ "distinct_identities": 20,
+ "cleanup": [
+  {
+   "issue": "BENCH-34",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-35",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-36",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-37",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-38",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-39",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-40",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-41",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-42",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-43",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-44",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-45",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-46",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-47",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-48",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-49",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-50",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-51",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-52",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-53",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-54",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-55",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-56",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-57",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-58",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-59",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-60",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-61",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-62",
+   "action": "deleted"
+  },
+  {
+   "issue": "BENCH-63",
+   "action": "deleted"
+  }
+ ],
+ "cleanup_complete": true
+}
