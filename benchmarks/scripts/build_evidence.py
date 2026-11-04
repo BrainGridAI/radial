@@ -87,8 +87,24 @@ add("L-LIVE-RACE", {"rounds": len(rounds), "workers_per_round": rounds[0]["worke
     "single Linear identity (one API key, 20 threads); read-then-update because Linear has no conditional update. Each round ends with one owner; every other worker got success and was never told it lost")
 add("R-CLAIM-ATOMIC", "claim_issue present on the live hosted MCP", "tool presence", rl / "mcp-tools-list.json",
     "see R-LIVE-MCP-TOOLS", ".names", 1,
-    "Radial's atomic claim (POST /v1/issues/{id}/claim, MCP tool claim_issue) is live on production as of 2026-11-02. Its live multi-identity race was NOT run (needs several agent keys). Evidence for atomicity is a 12-way concurrent unit test in the Radial app repo (private)",
+    "Radial's atomic claim (POST /v1/issues/{id}/claim, MCP tool claim_issue) is live on production as of 2026-11-02. The live multi-identity race was run on 2026-11-04 (see R-LIVE-RACE). A 12-way concurrent unit test in the Radial app repo (private) also covers it",
     label="DOCUMENTED")
 
-(ROOT / "evidence.json").write_text(json.dumps({"as_of": "2026-11-02", "labels": ["MEASURED", "DOCUMENTED", "SIMULATED", "ESTIMATE"], "evidence": ev}, indent=1) + "\n")
+# Live phase, 2026-11-04
+rr = ROOT / "runs/2026-11-04/radial-live/claim-race-rest.json"
+cr = json.loads(rr.read_text())
+rounds = cr["rounds"]
+results = [s for r in rounds for s in r["results"]]
+add("R-LIVE-RACE", {"rounds": len(rounds), "workers_per_round": rounds[0]["workers"],
+    "rounds_with_multiple_claimants": cr["rounds_with_multiple_claimants"], "total_silent_overwrites": cr["total_silent_overwrites"],
+    "workers_told_claimed": sum(r["believed_claimed"] for r in rounds), "workers_rejected_409": results.count("rejected-409"),
+    "errors": sum(1 for s in results if s not in ("claimed", "rejected-409")), "distinct_identities": cr["distinct_identities"]},
+    "rounds; overwrites; worker outcomes", rr, "RADIAL_KEYS=... RADIAL_TEAM=... python3 scripts/radial_race.py",
+    ".rounds_with_multiple_claimants, .total_silent_overwrites, .rounds[].results", len(rounds),
+    "20 distinct agent API keys (one per worker) in Radial's own internal workspace on production, temporary team; conditional claim (assignee null or caller, else 409). "
+    "On production an issue created by an agent is auto-assigned to the key's human owner, so the harness unassigns each issue and reads it back as null before the round. "
+    "A first run without that step was discarded (all 200 claims rejected). All test issues were deleted and the keys revoked after the run",
+    date="2026-11-04")
+
+(ROOT / "evidence.json").write_text(json.dumps({"as_of": "2026-11-04", "labels": ["MEASURED", "DOCUMENTED", "SIMULATED", "ESTIMATE"], "evidence": ev}, indent=1) + "\n")
 print(len(ev), "evidence rows")

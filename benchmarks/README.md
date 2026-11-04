@@ -36,9 +36,10 @@ All rows dated 2026-11-02. The id column is the key in `evidence.json`.
 | R-LIVE-MCP-TOOLS | Radial hosted MCP (`mcp.radial.build/mcp`) exposes **45 tools**. The `tools/list` response is **21,020 bytes** | MEASURED | 1 |
 | L-LIVE-T1T4 | Linear T1 to T4 through MCP (create, list next, claim and start, proof comment, done, done-note) takes **6 MCP calls**, median **3,187 ms** wall (min 2,608, max 3,293), about 9.1 KB read back per flow | MEASURED (scripted calls, no LLM time) | 5 |
 | L-LIVE-RACE | Linear claim race, 10 rounds x 20 workers: **10 of 10 rounds** had more than one worker told "claimed". **183 silent overwrites** in total: 193 workers got `success`, 10 issues ended with one owner each | MEASURED | 10 rounds |
-| R-CLAIM-ATOMIC | Radial atomic claim (`POST /v1/issues/{id}/claim`, MCP tool `claim_issue`) is live on production. Its live multi-identity race was **not run** | DOCUMENTED | n/a |
+| R-CLAIM-ATOMIC | Radial atomic claim (`POST /v1/issues/{id}/claim`, MCP tool `claim_issue`) is live on production. The live race is R-LIVE-RACE | DOCUMENTED | n/a |
+| R-LIVE-RACE | Radial claim race, 10 rounds x 20 workers, 20 distinct agent identities: **0 of 10 rounds** had more than one claimant. **0 silent overwrites**: 10 workers claimed, 190 got 409, 0 errors | MEASURED | 10 rounds |
 
-How to read the race. The Linear run used one API key from 20 threads. Linear has no conditional update, so each worker reads the issue, and if it still says Todo, calls `issueUpdate`. Every update returns `success`, and the last write wins. Separate identities do not add a precondition, so we expect the same outcome; that run was not done. For Radial, the claim endpoint rejects every claimant after the first. The evidence for that today is a 12-way concurrent unit test in the Radial app repo (private). A live race needs several agent keys and is the next run.
+How to read the race. The Linear run used one API key from 20 threads. Linear has no conditional update, so each worker reads the issue, and if it still says Todo, calls `issueUpdate`. Every update returns `success`, and the last write wins. Separate identities do not add a precondition, so we expect the same outcome; that run was not done. The Radial run used 20 distinct agent keys, one per worker, on production in Radial's own internal workspace with a temporary team. The claim is a conditional update (assignee null or caller, else 409). In every round one worker got the claim and the other 19 got 409. The setups differ on purpose: Radial's claim succeeds again for the current holder, so one key from 20 threads would give every worker 2xx and test nothing. On production, an issue created by an agent is auto-assigned to the key's human owner, so the harness unassigns each issue and reads it back as null before the round. A first run without that step got 200 of 200 claims rejected and was discarded. All test issues were deleted and the keys revoked after the run.
 
 How to read the tool-list bytes. The `tools/list` payload is what an MCP client loads into the agent's context before the first call. Linear's 60 tools average about 1,690 bytes each; Radial's 45 tools average about 470 bytes each. Fewer bytes is not more capability: see `coverage-matrix.md` for what each surface can do.
 
@@ -56,7 +57,7 @@ How to read the tool-list bytes. The `tools/list` payload is what an MCP client 
 | E-RAD-CLI-help-ms | `radial help`: median 27 ms startup (bun, from source), 4,250 bytes | MEASURED | 10 |
 | Coverage score | Capability score (yes = 1, partial = 0.5, 19 rows): Radial MCP 15.5, Radial CLI 16.0, Linear MCP 7.0, Linear CLI 0 (no official CLI), Jira MCP 7.5, Jira CLI (`acli`) 12.0. Without the three Radial-only rows: 13.5, 13.0, 7.0, 0, 7.5, 12.0 | DOCUMENTED + MEASURED | n/a |
 
-The full list, with units and JSON paths, is in `evidence.json` (56 rows).
+The full list, with units and JSON paths, is in `evidence.json` (57 rows).
 
 ## How to reproduce
 
@@ -78,8 +79,7 @@ The Radial hosted `tools/list` was captured with the same JSON-RPC client as `sc
 ## Limitations
 
 - **No live Radial task run yet.** Linear has live T1 to T4 timings; Radial does not. The Radial CLI rows are offline (startup, help bytes, static request counts). Do not compare L-LIVE-T1T4 to any Radial latency here.
-- **Radial's live claim race was not run.** Atomicity rests on a unit test in a private repo. Until the live multi-identity race lands, treat R-CLAIM-ATOMIC as DOCUMENTED, not MEASURED.
-- **The Linear race used one identity.** See "How to read the race" above.
+- **The two races use different setups.** Linear used one identity from 20 threads; Radial used 20 identities. See "How to read the race" above.
 - **Scripted calls, not agents.** L-LIVE-T1T4 and the baseline task timings are scripted. They include network and server time but no LLM reasoning. The only LLM numbers are the three token trials, and n=3 is below our n >= 5 bar.
 - **Coverage cells for Linear still cite docs.** The live tool list resolves the tool count, but the 8 `unknown` Linear MCP cells in `coverage-matrix.md` have not been re-scored from it.
 - **Jira is docs-only.** No live Jira run. Jira tool counts come from docs and an observed client list.

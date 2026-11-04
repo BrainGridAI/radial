@@ -26,7 +26,7 @@ steps=(
   "S07|DOCUMENTED|network (read-only web)|$RUN/sources/*.md|vendor docs research (manual / agent WebFetch; not scripted)"
   "S08|derived|offline|coverage-matrix.json, coverage-matrix.md|scripts/build_matrix.py"
   "S09|derived|offline|evidence.json|scripts/build_evidence.py"
-  "L01|MEASURED|rk_ key for a scratch Radial workspace|$RUN/radial-live/|DONE 2026-11-02: hosted MCP tools/list. TODO: T0-T8; multi-identity race through POST /v1/issues/{id}/claim (needs several agent keys)"
+  "L01|MEASURED|rk_ key for a scratch Radial workspace|$RUN/radial-live/|DONE 2026-11-02: hosted MCP tools/list. DONE 2026-11-04: multi-identity claim race 10x20 through POST /v1/issues/{id}/claim (scripts/radial_race.py, writes runs/2026-11-04/radial-live/). TODO: T0-T8"
   "L02|MEASURED|free Linear workspace + LINEAR_API_KEY|$RUN/linear-live/|DONE 2026-11-02: tools/list (scripts/linear_live.py); T1-T4 via MCP n=5 and claim race 10x20 (scripts/linear_tasks.py)"
   "L03|MEASURED|Atlassian Cloud site (Standard trial) + API token, acli installed|$RUN/jira-live/|TODO: tools/list, T0-T8 via MCP and acli; claim race; Rovo credit draw"
   "L04|MEASURED|all three + a scripted browser|$RUN/human/|TODO: human clicks, screens, time to first useful result for T3, T6, T7"
