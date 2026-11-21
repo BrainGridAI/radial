@@ -1,6 +1,6 @@
 ---
 name: rd-retro
-description: Audit one finished build against the rd-* workflow using only what Radial, the keyboard-first issue tracker, and git already hold: the tree, its activity, its comments, the pull request and the commits. Scores each rule with the evidence behind it, lists where time was wasted, and phrases every improvement as a wrapper section you can paste into .radial/skills/. Writes nothing. Use it in Claude Code or Codex after a tree ships, or on any tree that went badly.
+description: "Audit one finished build against the rd-* workflow using only what Radial, the keyboard-first issue tracker, and git already hold: the tree, its activity, its comments, the pull request and the commits. Scores each rule with the evidence behind it, lists where time was wasted, and phrases every improvement as a wrapper section you can paste into .radial/skills/. Writes nothing. Use it in Claude Code or Codex after a tree ships, or on any tree that went badly."
 metadata:
   short-description: Audit a finished Radial build against the workflow
 ---

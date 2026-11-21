@@ -1,6 +1,6 @@
 ---
 name: rd-build
-description: Work a filed tree in Radial, the keyboard-first issue tracker, child by child in dependency order: move each child to in progress, build it, check every acceptance line, run the repo's gate, drive the browse checks, post implementation notes as a comment, and move it to in review. Resumes from live issue statuses, so re-running continues instead of restarting. Use it in Claude Code or Codex after rd-issues. It never closes an issue; a human merges and closes.
+description: "Work a filed tree in Radial, the keyboard-first issue tracker, child by child in dependency order: move each child to in progress, build it, check every acceptance line, run the repo's gate, drive the browse checks, post implementation notes as a comment, and move it to in review. Resumes from live issue statuses, so re-running continues instead of restarting. Use it in Claude Code or Codex after rd-issues. It never closes an issue; a human merges and closes."
 metadata:
   short-description: Build a Radial tree child by child
 ---

@@ -8,10 +8,10 @@
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "32cec3fd21e9772b2f4215dafa2e611f05c2fcc4530fe2c528288c00931b7daa"
+          "sha256": "5125c87c9e59d008744c54abdade72273b26130126608a9392437f4ea06f9cdc"
         }
       ],
-      "sha256": "592050a10c37a4cea901b109aeb3c26455c6da5c843760834f3cbdf0020859db",
+      "sha256": "477b6991959eff7644292bf42e7a219995eae1b8f729f7af1db7cbc7c4f185a0",
       "hooks": [
         "before-child",
         "extra-checks",
@@ -27,10 +27,10 @@
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "2786221489c60ee65d6e889fafb13b7c86ef48a97a9b5b223b965c7b4b6183f7"
+          "sha256": "d4ea676dcc648e727db76eb8119e64fa9851b774220b6d0826e832b738fc6e5f"
         }
       ],
-      "sha256": "a544c2da95511098bd7635d0b7ab14ad036f4f9ea75062f5096a0a44d55c96a7",
+      "sha256": "03930be4d8930c5b876d05cfd7c410e89678c3d1dd65d12549e8a950d1eff1cb",
       "hooks": [
         "extra-sources",
         "entry-bar",
@@ -44,10 +44,10 @@
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "70aa6a402082bd08453e3b61628f28163608416172b3c3b4265379fd31875f58"
+          "sha256": "32b628a92f30532467254697d056098ab298880555d1e28650a9e45108f0cf39"
         }
       ],
-      "sha256": "91c61389c34666bcddec9f8acd4a9406c54f4b92f855c264dc2ee0cda154381b",
+      "sha256": "07a1be29c93015775c9b34ab25bbe9cb259a04cb99840c2ff15dcecd67bf7aa1",
       "hooks": [
         "evidence-bar",
         "extra-sweeps",
@@ -61,10 +61,10 @@
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "bb6145353baa37af39012f93d117ba1252ac1c5de131ae63dcbd2f83e5541ccd"
+          "sha256": "058c181c7829c9e18e97f376cc7bc1381de21b1a6eacc6a73d64308d08b41475"
         }
       ],
-      "sha256": "e778bdce5ee7dc1955b4e3e765562bdacc82215384eba6ec3f8502af2c183201",
+      "sha256": "b28ded0daad24c0b53d4f6c21c8c0de3fea47a3e9eea1fb097a26ef7ce912c84",
       "hooks": [
         "extra-fields",
         "file-bar",
@@ -82,10 +82,10 @@
         },
         {
           "path": "SKILL.md",
-          "sha256": "a8f56bccbf93e310d230d065680507b520e3d385f4d9b357996c0f5da521366c"
+          "sha256": "cdeb50be70f65258da24b171bcb3174c54d493ce63d64552801c366e7fddbb93"
         }
       ],
-      "sha256": "b011051290da856ff4abbfceb0a2e7f008fd5f37b82a6a32c610c3653cd89091",
+      "sha256": "966917ff67cc5cbf75b5b4045d39ebf7df620f3a2d5cea3f9e17eded5ca30f2c",
       "hooks": [
         "extra-questions",
         "extra-sections",
@@ -138,10 +138,10 @@
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "1db520a764772971fbacfbcf8b9b9ba9458ac616a477ed65acb5339c96548f7a"
+          "sha256": "ca695a5a10ca6deadc7f737719bc2f03425220e6c365182f0124eeb559f53ad9"
         }
       ],
-      "sha256": "fb5903fd80837443986551c032b1a9fe956248db443ab47e579d51e8da90ac05",
+      "sha256": "96873642c7712bf8c2f10820405f22c856a37b7386d2a2185d469fcb386adc77",
       "hooks": [
         "extra-rules",
         "score-bar",

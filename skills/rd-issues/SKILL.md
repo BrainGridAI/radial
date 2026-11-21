@@ -1,6 +1,6 @@
 ---
 name: rd-issues
-description: File a plan as a real tree in Radial, the keyboard-first issue tracker: one parent, its children, the blocked-by edges between them, and a read-back that proves every field landed. Default is backlog and unassigned; --start files the tree in progress, assigned to you, tagged with the agent that is building it. Use it in Claude Code or Codex after rd-plan. Not for writing the plan (rd-plan) or building it (rd-build).
+description: "File a plan as a real tree in Radial, the keyboard-first issue tracker: one parent, its children, the blocked-by edges between them, and a read-back that proves every field landed. Default is backlog and unassigned; --start files the tree in progress, assigned to you, tagged with the agent that is building it. Use it in Claude Code or Codex after rd-plan. Not for writing the plan (rd-plan) or building it (rd-build)."
 metadata:
   short-description: File a plan as a Radial issue tree
 ---
