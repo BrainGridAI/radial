@@ -1,6 +1,6 @@
 ---
 name: rd-plan
-description: Turn an idea into a plan for Radial, the keyboard-first issue tracker: one parent issue plus two to four children, each with a goal, a file list and acceptance criteria anyone can check. Writes the plan to .radial/plans/<slug>.md and creates nothing, so you can argue with it before it becomes a tree. Use it in Claude Code or Codex before starting work of more than an hour. Not for filing the tree (rd-issues) or for building it (rd-build).
+description: "Turn an idea into a plan for Radial, the keyboard-first issue tracker: one parent issue plus two to four children, each with a goal, a file list and acceptance criteria anyone can check. Writes the plan to .radial/plans/<slug>.md and creates nothing, so you can argue with it before it becomes a tree. Use it in Claude Code or Codex before starting work of more than an hour. Not for filing the tree (rd-issues) or for building it (rd-build)."
 metadata:
   short-description: Plan a change as a Radial parent and children
 ---

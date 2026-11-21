@@ -1,6 +1,6 @@
 ---
 name: rd-cleanup
-description: Find the stranded work in Radial, the keyboard-first issue tracker (open children under a parent that is already done, and issues sitting in progress with no activity for weeks) and decide each one on evidence: a merged pull request or a commit naming it means close it, no evidence means promote it to standalone. Shows a read-only table first and applies nothing until you say yes. Use it in Claude Code or Codex monthly, or after a big tree merges.
+description: "Find the stranded work in Radial, the keyboard-first issue tracker (open children under a parent that is already done, and issues sitting in progress with no activity for weeks) and decide each one on evidence: a merged pull request or a commit naming it means close it, no evidence means promote it to standalone. Shows a read-only table first and applies nothing until you say yes. Use it in Claude Code or Codex monthly, or after a big tree merges."
 metadata:
   short-description: Close or promote stranded Radial issues
 ---
